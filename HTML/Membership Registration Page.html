@@ -1,17 +1,428 @@
-
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo's Fitness Club</title>
 
+    <title>Membership Registration | Neo's Fitness Club</title>
+
+    <link rel="stylesheet" href="styling.css">
 </head>
+
 <body>
-    <p>Welcome to Neo's Fitness Club! We are dedicated to helping you achieve your fitness goals. Explore our services, view our gallery, and register for membership today!</p>
+
+    <header>
+
+        <nav>
+            <a href="Homepage.html">Home</a>
+
+            <a href="About Us Page.html">About Us</a>
+
+            <a href="Services.html">Services</a>
+
+            <a href="Class Schedule Page.html">Class Schedule</a>
+
+            <a href="Gallery Page.html">Gallery</a>
+
+            <a href="Membership Registration Page.html">Membership</a>
+
+            <a href="Contact Us Page.html">Contact Us</a>
+
+            
+        </nav>
+
+    </header>
+
+    <section class="hero membership-hero">
+
+        <h2>Membership Registration</h2>
+
+        <p>
+            Become a member of Neo's Fitness Club and start
+            your journey towards a healthier and stronger lifestyle.
+        </p>
+
+    </section>
+
+    <main class="container">
+
+        <section class="section">
+
+            <h2>Join Neo's Fitness Club</h2>
+
+            <p class="section-intro">
+                Complete the registration form below to become
+                a member. Choose a membership plan that suits
+                your fitness goals and lifestyle.
+            </p>
 
 
-    
+            <form class="membership-form">
+
+
+                <h3 class="form-heading">
+                    Personal Information
+                </h3>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="first-name">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="first-name"
+                            name="first-name"
+                            placeholder="Enter your first name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="last-name">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="last-name"
+                            name="last-name"
+                            placeholder="Enter your last name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="member-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="member-email"
+                            name="member-email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="member-phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="member-phone"
+                            name="member-phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="date-of-birth">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date-of-birth"
+                            name="date-of-birth"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="fitness-level">
+                            Fitness Level
+                        </label>
+
+                        <select
+                            id="fitness-level"
+                            name="fitness-level"
+                            required
+                        >
+
+                            <option value="">
+                                Select your fitness level
+                            </option>
+
+                            <option value="beginner">
+                                Beginner
+                            </option>
+
+                            <option value="intermediate">
+                                Intermediate
+                            </option>
+
+                            <option value="advanced">
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <h3 class="form-heading">
+                    Choose Your Membership
+                </h3>
+
+
+                <div class="membership-options">
+
+
+                    <label class="membership-option">
+
+                        <input
+                            type="radio"
+                            name="membership"
+                            value="basic"
+                            required
+                        >
+
+                        <div>
+
+                            <strong>Basic Membership</strong>
+
+                            <p>
+                                R299 per month
+                            </p>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="membership-option">
+
+                        <input
+                            type="radio"
+                            name="membership"
+                            value="premium"
+                        >
+
+                        <div>
+
+                            <strong>Premium Membership</strong>
+
+                            <p>
+                                R499 per month
+                            </p>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="membership-option">
+
+                        <input
+                            type="radio"
+                            name="membership"
+                            value="personal-training"
+                        >
+
+                        <div>
+
+                            <strong>Personal Training</strong>
+
+                            <p>
+                                R699 per month
+                            </p>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+                <h3 class="form-heading">
+                    Fitness Goals
+                </h3>
+
+
+                <div class="form-group">
+
+                    <label for="fitness-goals">
+                        What are your fitness goals?
+                    </label>
+
+                    <textarea
+                        id="fitness-goals"
+                        name="fitness-goals"
+                        rows="5"
+                        placeholder="Tell us about your fitness goals..."
+                    ></textarea>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="programme">
+                        Preferred Programme
+                    </label>
+
+                    <select
+                        id="programme"
+                        name="programme"
+                    >
+
+                        <option value="">
+                            Select a programme
+                        </option>
+
+                        <option value="strength">
+                            Strength Training
+                        </option>
+
+                        <option value="cardio">
+                            Cardio
+                        </option>
+
+                        <option value="yoga">
+                            Yoga
+                        </option>
+
+                        <option value="zumba">
+                            Zumba
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="terms">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            name="terms"
+                            required
+                        >
+
+                        I agree to the membership terms and
+                        conditions.
+
+                    </label>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="contact-button"
+                >
+                    Register Now
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2>Why Become A Member?</h2>
+
+
+            <div class="member-benefits">
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        💪
+                    </div>
+
+                    <h3>Quality Equipment</h3>
+
+                    <p>
+                        Access quality fitness equipment
+                        designed for effective workouts.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        🏆
+                    </div>
+
+                    <h3>Professional Trainers</h3>
+
+                    <p>
+                        Receive guidance and motivation from
+                        experienced fitness professionals.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <div class="benefit-icon">
+                        👥
+                    </div>
+
+                    <h3>Supportive Community</h3>
+
+                    <p>
+                        Train in a friendly environment with
+                        other people working towards their goals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; 2026 Neo's Fitness Club. All Rights Reserved.
+        </p>
+
+    </footer>
 
 </body>
 </html>
