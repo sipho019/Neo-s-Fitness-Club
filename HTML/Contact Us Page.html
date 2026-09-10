@@ -1,319 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contact Us</title>
-
-    <link rel="stylesheet" href="styling.css">
+    <title>Contact Us - Neo's Fitness Club</title>
+    <link rel="stylesheet" href="../CSS/styling.css">
 </head>
+<body class="inner-page">
+<header>
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="About Us Page.html">About Us</a>
+    <a href="Services.html">Services</a>
+    <a href="Class Schedule Page.html">Class Schedule</a>
+    <a href="Gallery Page.html">Gallery</a>
+    <a href="Membership Registration Page.html">Membership</a>
+    <a href="Contact Us Page.html">Contact Us</a>
+</nav>
+</header>
 
-<body>
+<div class="card">
+    <h1>Contact Us</h1>
+    <p>Have questions or want to join Neo's Fitness Club? Get in touch with our team today.</p>
 
+    <h2>Get In Touch</h2>
+    <p>We would love to hear from you. Contact us for membership information, fitness programmes, class schedules or any other questions.</p>
 
-    <header>
-          <nav>
-            <a href="Homepage.html">Home</a>
-
-            <a href="About Us Page.html">About Us</a>
-
-            <a href="Services.html">Services</a>
-
-            <a href="Class Schedule Page.html">Class Schedule</a>
-
-            <a href="Gallery Page.html">Gallery</a>
-
-            <a href="Membership Registration Page.html">Membership</a>
-
-            <a href="Contact Us Page.html">Contact Us</a>
-
+    <div class="contact-grid">
+        <div>
+            <h3>Phone</h3>
+            <p>012 345 6789<br>071 234 5678</p>
             
-        </nav>
-
-      
-
-    </header>
-
-
-    <section class="hero contact-hero">
-
-        <h2>Contact Us</h2>
-
-        <p>
-            Have questions or want to join Neo's Fitness Club?
-            Get in touch with our team today.
-        </p>
-
-    </section>
-
-
-    <main class="container">
-
-        <section class="section">
-
-            <h2>Get In Touch</h2>
-
-            <p class="section-intro">
-                We would love to hear from you. Contact us for
-                membership information, fitness programmes,
-                class schedules or any other questions.
-            </p>
-
-
-            <div class="contact-info">
-
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        ☎
-                    </div>
-
-                    <h3>Phone</h3>
-
-                    <p>
-                        012 345 6789
-                    </p>
-
-                    <p>
-                        071 234 5678
-                    </p>
-
-                </div>
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        ✉
-                    </div>
-
-                    <h3>Email</h3>
-
-                    <p>
-                        info@neosfitness.co.za
-                    </p>
-
-                    <p>
-                        support@neosfitness.co.za
-                    </p>
-
-                </div>
-
-
-                <div class="contact-card">
-
-                    <div class="contact-icon">
-                        📍
-                    </div>
-
-                    <h3>Location</h3>
-
-                    <p>
-                        Neo's Fitness Club
-                    </p>
-
-                    <p>
-                        Cape Town, South Africa
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-        <section class="section">
-
-            <h2>Send Us A Message</h2>
-
-            <p class="section-intro">
-                Complete the form below and our team will get
-                back to you as soon as possible.
-            </p>
-
-
-            <form class="contact-form">
-
-
-                <div class="form-group">
-
-                    <label for="name">
-                        Full Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your full name"
-                        required
-                    >
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email address"
-                        required
-                    >
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="phone">
-                        Phone Number
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number"
-                    >
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="subject">
-                        Subject
-                    </label>
-
-                    <select id="subject" name="subject">
-
-                        <option value="">
-                            Select a subject
-                        </option>
-
-                        <option value="membership">
-                            Membership
-                        </option>
-
-                        <option value="personal-training">
-                            Personal Training
-                        </option>
-
-                        <option value="group-classes">
-                            Group Classes
-                        </option>
-
-                        <option value="class-schedule">
-                            Class Schedule
-                        </option>
-
-                        <option value="general">
-                            General Enquiry
-                        </option>
-
-                    </select>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        placeholder="Write your message here..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <button type="submit" class="contact-button">
-                    Send Message
-                </button>
-
-
+            <h3>Email</h3>
+            <p>info@neosfitness.co.za<br>support@neosfitness.co.za</p>
+            
+            <h3>Location</h3>
+            <p>Neo's Fitness Club<br>Cape Town, South Africa</p>
+        </div>
+        
+        <div>
+            <h3>Send Us A Message</h3>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Your name">
+                <label>Email</label>
+                <input type="email" placeholder="Your email">
+                <label>Message</label>
+                <textarea rows="4" placeholder="Your message"></textarea>
+                <button type="submit">Send Message</button>
             </form>
-
-        </section>
-
-
-        <section class="section">
-
-            <h2>Opening Hours</h2>
-
-
-            <div class="opening-hours">
-
-                <div class="hours-row">
-                    <span>Monday - Friday</span>
-                    <strong>05:00 - 21:00</strong>
-                </div>
-
-                <div class="hours-row">
-                    <span>Saturday</span>
-                    <strong>06:00 - 18:00</strong>
-                </div>
-
-                <div class="hours-row">
-                    <span>Sunday</span>
-                    <strong>07:00 - 15:00</strong>
-                </div>
-
-                <div class="hours-row">
-                    <span>Public Holidays</span>
-                    <strong>08:00 - 14:00</strong>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="section contact-cta">
-
-            <h2>Ready To Start Your Fitness Journey?</h2>
-
-            <p>
-                Join Neo's Fitness Club today and take the first
-                step towards becoming stronger, healthier and
-                more confident.
-            </p>
-
-            <a href="services.html" class="service-button">
-                View Our Services
-            </a>
-
-        </section>
-
-
-    </main>
-
-
-    <footer>
-
-        <p>
-            &copy; 2026 Neo's Fitness Club. All Rights Reserved.
-        </p>
-
-    </footer>
-
-
-</body>
-
-</html>
-    
-
+        </div>
+    </div>
+</div>
 </body>
 </html>

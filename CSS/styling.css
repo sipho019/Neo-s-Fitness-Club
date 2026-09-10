@@ -1,273 +1,122 @@
-/*NEO'S FITNESS CLUB - FINAL CSS */
-
-/*CSS RESET + BASE STYLE */
-* {
+/* NEO'S FITNESS CLUB - FINAL CSS - FOR ALL PAGES */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background: #f5f5f5;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif; 
-    font-size: 16px;
-    background-color: #f4f4f4;
-    color: #333333;
-    line-height: 1.6; 
-}
-
-/*TYPOGRAPHY STYLES */
-h1, h2, h3 {
-    font-weight: bold;
-    letter-spacing: 0.5px; 
-    line-height: 1.2;
-}
-h1 { font-size: 3rem; } 
-h2 { font-size: 1.875rem; } 
-h3 { font-size: 1.375rem; } 
-p { font-size: 1rem; color: #555555; }
-
-/* EXTERNAL STYLESHEET LINKED TO ALL PAGES */
-
-/* HEADER & NAVIGATION - Layout with Flexbox */
-header {
-    background-color: #111111;
-    padding: 1.25rem; 
-    text-align: center;
-    width: 100%; 
-}
-
 nav {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    gap: 2.1875rem; 
-    flex-direction: row; 
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
 }
-
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    margin: 0 12px;
     font-weight: bold;
-    padding: 0.5rem 0.3125rem;
-    transition: 0.3s;
+    font-size: 14px;
 }
-
-/* VISUAL + PSEUDO CLASSES */
-nav a:hover { color: #ff5a00; } 
-nav a:focus { outline: 2px solid #ff5a00; } 
-nav a:active { color: #cc4800; } 
-
-/* HERO SECTION */
-.hero {
-    background-color: #222222;
+nav a:hover {
+    color: #ff6600;
+}
+.card {
+    background: white;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #111;
+}
+img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #5a4a42;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background: #3a2e2a;
     color: white;
-    text-align: center;
-    padding: 5.625rem 1.25rem;
-    width: 100%;
 }
-
-.hero h2 { font-size: 3.125rem; text-transform: uppercase; color: white; margin-bottom: 1rem; }
-.hero p { font-size: 1.125rem; max-width: 43.75rem; margin: 0 auto; color: #dddddd; }
-
-/*MAIN CONTAINER - Desktop Layout */
-.container {
-    width: 90%; 
-    max-width: 1100px;
-    margin: 3.125rem auto;
+td {
+    background: #fffaf5;
 }
-
-.section {
-    background-color: white;
-    padding: 2.5rem; 
-    margin-bottom: 1.875rem;
-    border-radius: 10px;
-    border: 1px solid #eeeeee;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
-    width: 100%;
+tr:nth-child(even) td {
+    background: #efe9e1;
 }
-
-.section h2 { text-align: center; margin-bottom: 1.5rem; color: #111111; }
-
-/* MISSION & VISION - Flexbox */
-.mission {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.mission-box {
-    flex: 1;
-    background-color: #111111;
-    padding: 1.875rem;
-    border-radius: 10px;
-    border-left: 5px solid #ff5a00;
-}
-.mission-box h3 { color: #ff5a00; margin-bottom: 0.75rem; }
-.mission-box p { color: #dddddd; }
-
-/* TRAINERS - Flexbox */
-.team {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.trainer {
-    flex: 1;
-    background-color: #f8f8f8;
-    text-align: center;
-    padding: 1.875rem 1.25rem;
-    border-radius: 10px;
-    border: 1px solid #eeeeee;
-    transition: 0.3s;
-}
-.trainer:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); border-color: #ff5a00; }
-
-.icon {
-    width: 4.6875rem; height: 4.6875rem;
-    background-color: #111111; color: #ff5a00;
-    border: 3px solid #ff5a00; border-radius: 50%;
-    display: flex; justify-content: center; align-items: center;
-    margin: 0 auto 1rem; font-size: 1.75rem; font-weight: bold; transition: 0.3s;
-}
-.trainer:hover .icon { background-color: #ff5a00; color: white; }
-
-/* SERVICES - Grid Layout Desktop 4 columns */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 1.25rem;
-    margin-top: 2rem;
-}
-
-.service-card {
-    background-color: #f8f8f8;
-    padding: 1.875rem 1.25rem;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid #eeeeee;
-    transition: 0.3s;
-}
-.service-card:hover { transform: translateY(-8px); border-color: #ff5a00; box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
-
-/* GROUP CLASSES - Grid */
-.classes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-    margin-top: 2rem;
-}
-.class-card { background-color: #111111; color: white; padding: 1.875rem 1.25rem; text-align: center; border-radius: 10px; transition: 0.3s; }
-.class-card:hover { background-color: #ff5a00; transform: translateY(-7px); }
-
-/* MEMBERSHIP - Grid 3 columns Desktop */
-.membership {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-.membership-card {
-    background-color: #f8f8f8; padding: 2.1875rem 1.5rem; text-align: center;
-    border-radius: 12px; border: 1px solid #eeeeee; position: relative; transition: 0.3s;
-}
-.membership-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); border-color: #ff5a00; }
-.price { font-size: 2rem !important; font-weight: bold; color: #ff5a00 !important; }
-.membership-card.featured { border: 2px solid #ff5a00; transform: scale(1.03); }
-.popular { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background-color: #ff5a00; color: white; padding: 6px 18px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
-
-/* 3.3 RESPONSIVE IMAGES - Gallery */
+/* FIX HUGE GALLERY IMAGES */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
-.gallery-item { overflow: hidden; border-radius: 10px; }
-.gallery-item img {
-  width: 100%;
-  object-fit: cover; 
-  border-radius: 10px;
-  display: block;
-  max-width: 100%; 
+.gallery-grid img, .gallery-item img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
-
-/* TABLES */
-.table-container { width: 100%; overflow-x: auto; margin-top: 2rem; }
-table { width: 100%; border-collapse: collapse; background-color: white; }
-thead { background-color: #111111; color: white; }
-th { padding: 1rem; text-align: left; text-transform: uppercase; }
-td { padding: 0.9375rem; border-bottom: 1px solid #eeeeee; color: #555555; }
-tbody tr:hover { background-color: #fff4ed; }
-
-/* FORMS */
-.contact-form, .membership-form { max-width: 53.125rem; margin: 2rem auto 0; width: 100%; }
-.form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-.form-group { margin-bottom: 1.375rem; }
-.form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9375rem; }
-.form-group input, .form-group select, .form-group textarea {
-    width: 100%; padding: 0.875rem 0.9375rem; border: 1px solid #dddddd;
-    border-radius: 6px; background-color: #fafafa; font-size: 0.9375rem; outline: none; transition: 0.3s;
+/* Aesthetic Form - Membership */
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #3a2e2a;
 }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-    border-color: #ff5a00; background-color: white; box-shadow: 0 0 0 3px rgba(255,90,0,0.1);
-}
-
-/* BUTTONS - Visual */
-.service-button, .contact-button {
-    display: inline-block; background-color: #ff5a00; color: white;
-    text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 5px;
-    font-weight: bold; border: none; cursor: pointer; transition: 0.3s;
+form input[type="text"], form input[type="email"], 
+form input[type="tel"], form input[type="date"], form select {
     width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #e8ddd0;
+    border-radius: 6px;
+    background: white;
+    box-sizing: border-box;
 }
-.service-button:hover, .contact-button:hover { background-color: #111111; transform: translateY(-2px); }
-.service-button:active { background-color: #cc4800; }
-
-/* FOOTER */
-footer {
-    background-color: #111111; color: white; text-align: center;
-    padding: 1.5rem 1.25rem; margin-top: 3rem; border-top: 3px solid #ff5a00;
+form button {
+    margin-top: 20px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+form button:hover {
+    background: #3a2e2a;
+}
+.radio-group {
+    margin: 15px 0;
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e8ddd0;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+textarea {
     width: 100%;
-}
-
-/* 3.1 BREAKPOINTS - RESPONSIVE DESIGN */
-
-/* TABLET - 900px - switches multi-column to 2-column */
-@media (max-width: 900px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .classes { grid-template-columns: repeat(2, 1fr); }
-    .membership { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .membership-card.featured { transform: none; }
-    .form-row { grid-template-columns: 1fr; }
-}
-
-/* TABLET SMALL / LARGE MOBILE - 768px */
-@media (max-width: 768px) {
-    nav { flex-direction: column; gap: 0.625rem; }
-    .hero { padding: 4.375rem 1.25rem; }
-    .hero h2 { font-size: 2.375rem; } /* reduces font - 3.1 */
-    .container { width: 92%; margin: 2.1875rem auto; }
-    .section { padding: 1.875rem 1.25rem; }
-    .mission { flex-direction: column; }
-    .team { flex-direction: column; }
-}
-
-/* MOBILE - 600px - switches to single-column */
-@media (max-width: 600px) {
-    .services-grid { grid-template-columns: 1fr; }
-    .classes { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr; }
-    .hero h2 { font-size: 2rem; }
-    .hero p { font-size: 0.9375rem; }
-    .gallery-item img { height: 12.5rem; } /* smaller on mobile - 3.1 */
-    table { min-width: 700px; }
-}
-
-/* SMALL PHONE - 480px */
-@media (max-width: 480px) {
-    .hero h2 { font-size: 1.875rem; }
-    .section h2 { font-size: 1.4375rem; }
-    .section { padding: 1.5rem 0.9375rem; }
+    padding: 10px;
+    border: 1px solid #e8ddd0;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
