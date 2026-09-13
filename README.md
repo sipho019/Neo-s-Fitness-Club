@@ -77,3 +77,18 @@ Sipho Mshumpela - ST10535603
 GitHub: sipho019
 
 © 2026 Neo's Fitness Club
+
+## References
+
+### Images
+- fitness.png, equipment.jpeg, strength.jpeg, cardio.jpeg
+- Source: AI generated using [ChatGPT]
+- Downloaded from Pinterest
+- Used for educational purposes in WEDE POE
+
+### Code
+- HTML5 Semantic elements - MDN Docs (developer.mozilla.org)
+- All text content original by Neo
+
+### Declaration
+All AI images declared as required.
