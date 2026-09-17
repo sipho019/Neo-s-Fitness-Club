@@ -37,7 +37,7 @@ Welcome to Neo's Fitness Club official website. This is a responsive fitness web
 
 **Live Website:** https://sipho019.github.io/Neo-s-Fitness-Club/
 
-### What I Fixed & Improved - WEDE5020 POE Part 2
+### What I Fixed & Improved - WEDE5020 POE Part 1
 
 #### 1. Homepage Table Styling
 - Added proper black border lines to all table cells (`border: 1px solid`)
@@ -92,3 +92,48 @@ GitHub: sipho019
 
 ### Declaration
 All AI images declared as required.
+
+# Neo's Fitness Club - WEDE5020 Part 2
+
+## Part 2 - New Information
+
+**What was added for Part 2:**
+
+**2.2 Content & Structure:** Final content added to all 7 pages (Home, About, Services, Schedule, Gallery, Membership, Contact). All pages now use semantic HTML tags.
+
+**2.3 External CSS:** All styling moved to single external file styling.css. Consistent design across site.
+
+**2.4 Visual Design & Responsive Layout:** Major redesign - Changed background from plain white to modern sage green wellness theme. Implemented Flexbox for header/footer navigation and CSS Grid for main content layout. Typography changed to rem units for accessibility and containers use percentage and max-width for responsiveness. Tested on mobile 375px, tablet 768px, and desktop 1920px.
+
+**Part 2 Features:** Responsive navigation that stacks vertically on mobile, modern green background visible on all screen sizes, readable typography on all devices.
+
+## Changelog
+
+**New Entries for Part 2:**
+
+- Created external stylesheet styling.css and linked to all pages
+- Implemented Flexbox and Grid layout systems
+- Changed color scheme to modern green theme (sage green #eef4ee)
+- Added JavaScript file for interactivity
+- Added Membership and Contact forms
+- Optimized images with srcset files
+- Created screenshots folder with responsive evidence for Task 3.4
+
+**Feedback Edits Made from Part 1:**
+- Fixed feedback: Navigation was not consistent - Now black header is same on all 7 pages
+- Fixed feedback: Website was not responsive - Now passes all responsive tests at 375px, 768px, 1920px
+- Fixed feedback: Used inline styles - Now all styles moved to external CSS
+- Fixed feedback: Used fixed pixel sizes - Now uses rem and % for accessibility and responsiveness
+- Fixed feedback: White background looked plain - Now modern green background with radial gradients
+- Fixed feedback: Duplicate CSS rules - Cleaned styling.css to have one body rule
+
+## References
+
+1. IIE Rosebank College - WEDE5020 Module Manual and Part 2 Brief
+2. W3Schools - CSS Flexbox and Grid Layout Documentation - https://www.w3schools.com/css/
+3. MDN Web Docs - Responsive Design and Media Queries - https://developer.mozilla.org/
+4. Google Fonts - Inter Font Family
+5. Chrome DevTools Documentation - Device Toolbar Testing - https://developer.chrome.com/docs/devtools/
+
+## How to Test Responsiveness
+Open Chrome > Press F12 > Click Toggle Device Toolbar (phone icon) > Change dimensions to 375, 768, 1920
