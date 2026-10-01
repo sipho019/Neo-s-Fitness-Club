@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Neo's Fitness Club | Affordable Gym in Johannesburg</title>
+<meta name="description" content="Join Neo's Fitness Club - Basic R199, Standard R349, Premium R499. Personal training, group classes, 24/7 access in Johannesburg.">
+<meta name="keywords" content="Neo's Fitness Club, gym Johannesburg, affordable gym, fitness club South Africa">
+<meta name="author" content="Neo's Fitness Club">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph for SEO -->
+<meta property="og:title" content="Neo's Fitness Club">
+<meta property="og:description" content="Get fit with Neo's Team - Best gym deals in SA">   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neo's Fitness Club</title>
     <link rel="stylesheet" href="CSS/styling.css">
 </head>
 <body>
+    
     <!-- Header contains the main navigation for the site -->
     <header>
         <nav>
@@ -28,9 +38,28 @@
                 <!-- Introductory paragraph for the homepage -->
                 <p><i>We are dedicated to helping you achieve your fitness goals. Explore our services, view our gallery, and register for membership today!</i></p>
                 <img src="./MEDIA/fitness.png" alt="Fitness Image" style="width:100%;height:auto;">
+                 
             </div>
         </section>
     </main>
+
+<select id="plan">
+  <option value="basic">Basic - R199/mo</option>
+  <option value="standard">Standard - R349/mo</option>
+  <option value="premium">Premium - R499/mo</option>
+</select>
+
+<input type="number" id="months" value="1" min="1" max="12">
+<p id="total-price"></p>
+
+<form id="join-form">
+    <input id="member-name" placeholder="Your age">
+  <input id="member-name" placeholder="Your Name">
+  <input id="member-email" placeholder="Email">
+  <input id="member-phone" placeholder="Phone">
+  <button type="submit">JOIN NEO'S FITNESS NOW</button>
+  <p id="form-message"></p>
+</form>
 
     <!-- Footer section -->
     <footer>
