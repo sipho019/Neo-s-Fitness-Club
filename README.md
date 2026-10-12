@@ -80,18 +80,23 @@ GitHub: sipho019
 
 ## References
 
-### Images
-- fitness.png, equipment.jpeg, strength.jpeg, cardio.jpeg
-- Source: AI generated using [ChatGPT]
-- Downloaded from Pinterest
-- Used for educational purposes in WEDE POE
+Chrome for Developers (n.d.) *Simulate mobile devices with Device Mode*. Available at: https://developer.chrome.com/docs/devtools/device-mode (Accessed: 12 October 2026).
 
-### Code
-- HTML5 Semantic elements - MDN Docs (developer.mozilla.org)
-- All text content original by Neo
+Google (n.d.) *Inter* [Font family]. Available at: https://fonts.google.com/specimen/Inter (Accessed: 12 October 2026).
 
-### Declaration
-All AI images declared as required.
+IIE Rosebank College (2026) *WEDE5020 Module Manual and Part 2 Brief*. Unpublished module material. [Campus]: IIE Rosebank College.
+
+MDN Web Docs (n.d.) *HTML elements reference*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element (Accessed: 12 October 2026).
+
+MDN Web Docs (n.d.) *Responsive design*. Available at: [paste exact page URL] (Accessed: 12 October 2026).
+
+OpenAI (2026) *ChatGPT* [Large language model]. Available at: https://chat.openai.com (Accessed: 12 October 2026). Used to generate fitness.png and [other image files].
+
+[Pinterest creator] ([Year]) *[Image title]* [Online image]. Available at: [pin URL] (Accessed: 12 October 2026). Used for [image files].
+
+W3Schools (n.d.) *CSS flexbox*. Available at: https://www.w3schools.com/css/css3_flexbox.asp (Accessed: 12 October 2026).
+
+W3Schools (n.d.) *CSS grid layout*. Available at: https://www.w3schools.com/css/css_grid.asp (Accessed: 12 October 2026).
 
 # Neo's Fitness Club - WEDE5020 Part 2
 
