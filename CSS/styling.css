@@ -1,16 +1,14 @@
-/* NEO'S FITNESS CLUB  CSS - FOR ALL PAGES */
+/* NEO'S FITNESS CLUB */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     background: #f5f5f5;
 }
 nav {
     background: #111;
     padding: 15px;
-    text-align: center;
-    position: sticky;
-    top: 0;
+    text-align: left;
 }
 nav a {
     color: white;
@@ -89,7 +87,7 @@ form input[type="tel"], form input[type="date"], form select {
 }
 form button {
     margin-top: 20px;
-    background: #6600ffae;
+    background: orange;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -120,42 +118,7 @@ textarea {
     border-radius: 6px;
     box-sizing: border-box;
 }
-/* =======================================================
-   NEO'S FITNESS CLUB
-   ======================================================= */
 
-/* 2.2 CSS RESET + 3.2 RELATIVE UNITS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    /* PROFESSIONAL FITNESS PALETTE */
-    --black: #0a0a0a;
-    --charcoal: #1c1c1e;
-    --dark-grey: #2c2c2e;
-    --off-white: #f8f9fa;
-    --light-grey: #e9ecef;
-    --red: #e10600; /* Power Red - Professional */
-    --red-hover: #b80500;
-    --text-dark: #212529;
-    --text-light: #adb5bd;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    /* 2.2 Base Style + 2.3 Typography */
-    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--text-dark);
-    background-color: var(--off-white);
-}
 
 /* 2.3 TYPOGRAPHY */
 h1, h2, h3 {
@@ -192,7 +155,7 @@ header {
 
 nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     gap: 2.5rem;
 }
 
@@ -283,11 +246,6 @@ nav ul li a {
 
 /* Professional hover states */
 
-
-nav ul{
-    
-}
-
 .btn:hover {
     background-color: var(--red-hover);
     border-color: var(--red-hover);
@@ -338,13 +296,8 @@ nav ul{
     h1 { font-size: 2.2rem; }
     .hero { padding: 3rem 5%; }
 }
-/* =======================================================
-   NEO'S FITNESS CLUB - FINAL COMBINED EDITION
-   Professional + Modern Green Background
-   ======================================================= */
 
 /* 2.2 BASE + RESET + 3.2 RELATIVE UNITS */
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
   --sage-bg: #eef4ee;
@@ -481,12 +434,6 @@ nav a { color: #c5d9c8; font-weight: 600; text-transform: uppercase; font-size: 
   transition: 0.3s;
 }
 
-/* :hover, :focus, :active */
-nav a:hover { color: white; }
-nav a:focus { outline: 2px solid var(--lime); outline-offset: 4px; }
-.btn:hover { background-color: var(--lime-hover); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(139,195,74,0.4); }
-.btn:active { transform: translateY(0); }
-.class-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
 
 /* 3.3 RESPONSIVE IMAGES */
 .responsive-img, picture img {
