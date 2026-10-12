@@ -1,4 +1,4 @@
-/* NEO'S FITNESS CLUB - FINAL CSS - FOR ALL PAGES */
+/* NEO'S FITNESS CLUB  CSS - FOR ALL PAGES */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -89,7 +89,7 @@ form input[type="tel"], form input[type="date"], form select {
 }
 form button {
     margin-top: 20px;
-    background: #ff6600;
+    background: #6600ffae;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -282,8 +282,11 @@ nav ul li a {
 }
 
 /* Professional hover states */
-nav ul li a:hover { color: white; }
-nav ul li a:focus { outline: 2px solid var(--red); outline-offset: 4px; }
+
+
+nav ul{
+    
+}
 
 .btn:hover {
     background-color: var(--red-hover);

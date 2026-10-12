@@ -18,3 +18,4 @@ All original content preserved.
 -Added Membership and Contact forms
 -Optimized images with srcset files
 -Created screenshots folder with responsive evidence for Task 3.4
+
