@@ -25,39 +25,14 @@ nav a:hover {
 nav ul {
     display: flex;
     flex-direction:column;
-    gap: 2.5rem;
     list-style: none;
     
 }
 
 /* TYPOGRAPHY */
-h1, h2, h3 {
-    font-family: 'Oswald', 'Montserrat', sans-serif;
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--black);
-}
-
-h1 {
-     font-size: 3.5rem;
- }
-h2 { font-size: 2.5rem;
-     margin-bottom: 1rem;
- }
-h3 {
-     font-size: 1.4rem;
-      margin-bottom: 0.5em;
-}
-p { font-size: 1rem; 
-    margin-bottom: 1em;
-     color: #495057;
- }
-
 
 .card {
-    background: white;
+    background: rgb(243, 235, 235);
     max-width: 900px;
     margin: 30px auto;
     padding: 30px;
@@ -335,13 +310,7 @@ body {
   line-height: 1.7;
   color: #070907;
 
-  /* NEW MODERN GREEN - replaces white */
-  background-color: var(--sage-bg);
-  background-image: 
-    radial-gradient(circle at 10% 20%, #d9e8d0 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, #c5dfb8 0%, transparent 40%);
 }
-
 /* 2.3 TYPOGRAPHY */
 h1, h2, h3 {
   font-family: 'Oswald', sans-serif;
@@ -350,10 +319,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   color: var(--forest);
 }
-h1 { font-size: 3.2rem; font-weight: 800; }
-h2 { font-size: 2.4rem; margin-bottom: 1rem; }
-h3 { font-size: 1.4rem; margin-bottom: 0.5em; }
-p { font-size: 1rem; margin-bottom: 1em; color: #4a5d4f; }
+
 
 /* 2.4 LAYOUT STRUCTURE */
 header {
