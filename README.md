@@ -80,18 +80,23 @@ GitHub: sipho019
 
 ## References
 
-### Images
-- fitness.png, equipment.jpeg, strength.jpeg, cardio.jpeg
-- Source: AI generated using [ChatGPT]
-- Downloaded from Pinterest
-- Used for educational purposes in WEDE POE
+Chrome for Developers (n.d.) *Simulate mobile devices with Device Mode*. Available at: https://developer.chrome.com/docs/devtools/device-mode (Accessed: 12 October 2026).
 
-### Code
-- HTML5 Semantic elements - MDN Docs (developer.mozilla.org)
-- All text content original by Neo
+Google (n.d.) *Inter* [Font family]. Available at: https://fonts.google.com/specimen/Inter (Accessed: 12 October 2026).
 
-### Declaration
-All AI images declared as required.
+IIE Rosebank College (2026) *WEDE5020 Module Manual and Part 2 Brief*. Unpublished module material. [Campus]: IIE Rosebank College.
+
+MDN Web Docs (n.d.) *HTML elements reference*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element (Accessed: 12 October 2026).
+
+MDN Web Docs (n.d.) *Responsive design*. Available at: [paste exact page URL] (Accessed: 12 October 2026).
+
+OpenAI (2026) *ChatGPT* [Large language model]. Available at: https://chat.openai.com (Accessed: 12 October 2026). Used to generate fitness.png and [other image files].
+
+[Pinterest creator] ([Year]) *[Image title]* [Online image]. Available at: [pin URL] (Accessed: 12 October 2026). Used for [image files].
+
+W3Schools (n.d.) *CSS flexbox*. Available at: https://www.w3schools.com/css/css3_flexbox.asp (Accessed: 12 October 2026).
+
+W3Schools (n.d.) *CSS grid layout*. Available at: https://www.w3schools.com/css/css_grid.asp (Accessed: 12 October 2026).
 
 # Neo's Fitness Club - WEDE5020 Part 2
 
@@ -127,13 +132,20 @@ All AI images declared as required.
 - Fixed feedback: White background looked plain - Now modern green background with radial gradients
 - Fixed feedback: Duplicate CSS rules - Cleaned styling.css to have one body rule
 
+
 ## References
 
-1. IIE Rosebank College - WEDE5020 Module Manual and Part 2 Brief
-2. W3Schools - CSS Flexbox and Grid Layout Documentation - https://www.w3schools.com/css/
-3. MDN Web Docs - Responsive Design and Media Queries - https://developer.mozilla.org/
-4. Google Fonts - Inter Font Family
-5. Chrome DevTools Documentation - Device Toolbar Testing - https://developer.chrome.com/docs/devtools/
+Chrome for Developers (n.d.) *Simulate mobile devices with Device Mode*. Available at: https://developer.chrome.com/docs/devtools/device-mode (Accessed: 12 October 2026).
+
+Google (n.d.) *Inter* [Font family]. Available at: https://fonts.google.com/specimen/Inter (Accessed: 12 October 2026).
+
+IIE Rosebank College (2026) *WEDE5020 Module Manual and Part 2 Brief*. Unpublished module material. Johannesburg: IIE Rosebank College.
+
+MDN Web Docs (n.d.) *Responsive design*. Available at: [paste the exact page URL] (Accessed: 12 October 2026).
+
+W3Schools (n.d.) *CSS flexbox*. Available at: https://www.w3schools.com/css/css3_flexbox.asp (Accessed: 12 October 2026).
+
+W3Schools (n.d.) *CSS grid layout*. Available at: https://www.w3schools.com/css/css_grid.asp (Accessed: 12 October 2026).
 
 ## How to Test Responsiveness
 Open Chrome > Press F12 > Click Toggle Device Toolbar (phone icon) > Change dimensions to 375, 768, 1920
