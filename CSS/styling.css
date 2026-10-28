@@ -93,7 +93,7 @@ nav a:hover {
 /* TYPOGRAPHY */
 
 .card {
-    background: rgb(243, 235, 235);
+    background: rgba(255, 255, 255, 0.83);
     max-width: 900px;
     margin: 30px auto;
     padding: 30px;
