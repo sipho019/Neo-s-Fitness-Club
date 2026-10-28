@@ -501,7 +501,7 @@ html { scroll-behavior: smooth; }
 }
 .card-box p {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(8, 8, 8);
+    color: black;
     padding: 10px;
     margin-left: 25px;
     font-size: larger;
@@ -555,6 +555,6 @@ html { scroll-behavior: smooth; }
 .accordion-content{
     display: none;
     padding: 15px;
-    background-color: rgba(129, 129, 222, 0.901);
+    background-color: rgb(149, 201, 206);
     border-top: 1px solid black;
 }
