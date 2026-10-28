@@ -139,9 +139,27 @@ img {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.933);
     transform: translate(-50%, -50%);
 }
+.slidder-wrapper{
+    overflow: hidden;
+    width: 100%;
+}
+.image-list{
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 
-
-
+}
+.image-item{
+    flex: auto;
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    align-items: center;
+}
+.image-item:hover{
+    color: #0a0b0a;
+}
  /* Layout Structure*/
 
 .hero {
