@@ -557,4 +557,31 @@ html { scroll-behavior: smooth; }
     padding: 15px;
     background-color: rgb(149, 201, 206);
     border-top: 1px solid black;
+}y
+
+/* SERVICES */
+
+.service-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.gallery-slider{
+    overflow: hidden;
+    width: 100%;
+}
+.gallery-list{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.gallery-item{
+    flex: auto;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    align-items: center;
 }
