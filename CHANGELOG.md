@@ -19,3 +19,19 @@ All original content preserved.
 -Optimized images with srcset files
 -Created screenshots folder with responsive evidence for Task 3.4
 
+## Feedback Update according to Part 2 - (12 Oct 2026)
+
+- Included Harvad referencing format.
+- edited Breakpoints (480px)
+- Deleted JavaScript files (not yet required)
+- Table UX scrolling in smaller screens (edited).
+- Screenshots embedded (3 screenshots).
+- Added unorderd list tag.
+
+## Major Changes/ Enhancement - (27-29 Oct 2026)
+
+- Changed Hero page
+- Modified Header
+- Added slider wrapper with images
+- Slightly added new color scheme (dark purple).
+- Removed unessecary codes and tags.
