@@ -480,14 +480,6 @@ footer p{
 }
 
 html { scroll-behavior: smooth; }
-
-
-/* ABOUT PAGE */
-
-/* section */
-
-
-
 /* card-box */
 
 .card-box{
@@ -557,31 +549,156 @@ html { scroll-behavior: smooth; }
     padding: 15px;
     background-color: rgb(149, 201, 206);
     border-top: 1px solid black;
-}y
-
-/* SERVICES */
-
-.service-wrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
 }
-.gallery-slider{
-    overflow: hidden;
+
+
+/* SERVICES PAGE */
+
+.service-title {
+    text-align: center;
+    margin: 35px 20px 25px;
+}
+
+.service-title h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.service-title p {
+    line-height: 1.6;
+}
+
+/* Main container for all service cards */
+
+.service-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.gallery-list{
+
+/* Individual service card */
+
+.service-card {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr) 280px;
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Service name */
+
+.service-card h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Gallery containers */
+
+.gallery-container {
+    width: 100%;
+    min-width: 0;
+}
+
+.gallery-slider {
+    width: 100%;
+    min-width: 0;
+}
+
+.gallery-list {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
     overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 12px;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
 }
-.gallery-item{
-    flex: auto;
-    width: 200px;
-    height: auto;
+
+/* Individual gallery images */
+
+.gallery-item {
+    display: block;
+    flex: 0 0 240px;
+    width: 240px;
+    height: 180px;
     object-fit: cover;
-    align-items: center;
+    border-radius: 10px;
+    scroll-snap-align: start;
+}
+
+/* Description beside each gallery */
+
+.service-description {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* TABLET LAYOUT */
+
+@media (max-width: 1000px) {
+    .service-card {
+        grid-template-columns: 120px minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .service-description {
+        grid-column: 2;
+    }
+
+    .gallery-item {
+        flex-basis: 220px;
+        width: 220px;
+    }
+}
+
+/* MOBILE LAYOUT  */
+
+@media (max-width: 480px) {
+    .service-title h2 {
+        font-size: 26px;
+    }
+
+    .service-wrapper {
+        padding: 12px;
+        gap: 20px;
+    }
+
+    .service-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .service-card h4 {
+        font-size: 20px;
+    }
+
+    .service-description {
+        grid-column: 1;
+        font-size: 14px;
+    }
+
+    .gallery-item {
+        flex: 0 0 85%;
+        width: 85%;
+        height: 200px;
+    }
 }
