@@ -35,3 +35,7 @@ All original content preserved.
 - Added slider wrapper with images
 - Slightly added new color scheme (dark purple).
 - Removed unessecary codes and tags.
+
+# Changes (30 Oct 2026)
+
+- Deleted class page, added into service page.
