@@ -5,10 +5,8 @@
     <link rel="stylesheet" href="../CSS/styling.css">
 
 </head>
-<body class="inner-page">
+<body>
 <!-- /* Header with navigation - same on all pages */ -->
-
-
 <header>
 <nav>
     <ul>
@@ -26,35 +24,36 @@
 
 <!-- /* Main content area */ -->
 
-<section>
-<div class="card">
-    <h1>Membership Registration</h1>
+<main class="registration-container">
+<div class="registration-msg">
+    <h1>Join Us</h1>
     <!-- /* Intro - original content kept */ -->
     <p>Become a member of Neo's Fitness Club and start your journey towards a healthier and stronger lifestyle.</p>
 
-    <h2>Join Neo's Fitness Club</h2>
-    <p>Complete the registration form below to become a member. Choose a membership plan that suits your fitness goals and lifestyle.</p>
 
+
+    
+</div>
     <!-- /* Personal information form */ -->
-    <h3>Personal Information</h3>
-    <form>
+    <form class="registration-form">
+        <h3>Personal Information</h3>
         <label>First Name</label>
-        <input type="text" placeholder="Enter your first name">
+        <input type="text" id="details" placeholder="Enter your first name">
         
         <label>Last Name</label>
-        <input type="text" placeholder="Enter your last name">
+        <input type="text" id="details" placeholder="Enter your last name">
         
         <label>Email Address</label>
-        <input type="email" placeholder="Enter your email">
+        <input type="email" id="details" placeholder="Enter your email">
         
         <label>Phone Number</label>
-        <input type="tel" placeholder="Enter your phone number">
+        <input type="tel" id="details" placeholder="Enter your phone number">
         
         <label>Date of Birth</label>
-        <input type="date">
+        <input type="date" id="details">
         
         <label>Fitness Level</label>
-        <select>
+        <select id="details">
             <option>Select your fitness level</option>
             <option>Beginner</option>
             <option>Intermediate</option>
@@ -64,6 +63,8 @@
         <!-- /* Membership plan selection */ -->
         <h3>Choose Your Membership</h3>
         <div class="radio-group">
+            <label><input type="radio" name="plan"> Student Membership - R230 </label>
+            <p id="note">Note:<i>Students should come with their Current physical Student Cards</i></p><br>
             <label><input type="radio" name="plan"> Basic Membership - R299 per month</label><br>
             <label><input type="radio" name="plan"> Premium Membership - R499 per month</label><br>
             <label><input type="radio" name="plan"> Personal Training - R699 per month</label>
