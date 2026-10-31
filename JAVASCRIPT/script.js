@@ -114,7 +114,6 @@ if (registrationForm) {
         // Calculate selected membership price
         const price = Number(selectedPlan.value);
 
-
         // Display successful registration
 
         registrationMessage.textContent =
@@ -148,3 +147,19 @@ $(document).ready(function (){
         $("#membershipPrice").text("selected membership: R" + selectedPrice + "per month");
     });
 });
+// TABS
+$('.tab-link').click(function() {
+  let tab = $(this).data('tab');
+  $('.tab-link').removeClass('active');
+  $('.tab-content').removeClass('active');
+  $(this).addClass('active');
+  $('#' + tab).addClass('active');
+});
+
+// MODAL - show when they select membership
+$('input[name="plan"]').on('change', function() {
+  let price = $(this).val();
+  $('#modalPrice').text('You selected R' + price + '/month');
+  $('#successModal').fadeIn(300);
+});
+$('.close').click(function() { $('#successModal').fadeOut(); });
