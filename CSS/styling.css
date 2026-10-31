@@ -633,7 +633,7 @@ html { scroll-behavior: smooth; }
 }
 
 .accordion-header{
-    background-color: #022357;
+    background-color: #022b01;
     color: #fefefd;
     padding: 15px;
     cursor: pointer;
@@ -644,7 +644,7 @@ html { scroll-behavior: smooth; }
     transition: background-color 0.2s ease;
 }
 .accordion-header:hover{
-    background-color: #0d06d2cd;
+    background-color: #026604cd;
 }
 
 /* Active header */
@@ -655,11 +655,11 @@ html { scroll-behavior: smooth; }
 .accordion-content{
     display: none;
     padding: 18px;
-    background-color: rgba(55, 7, 225, 0.671);
+    background-color: rgba(2, 139, 107, 0.367);
     border-top: 1px solid black;
 }
 .accordion-content p{
-    color: white;
+    color: rgb(9, 4, 4);
 }
 
 /* SERVICES PAGE */
@@ -865,4 +865,53 @@ main.registration-container{
    background-color: #020906d7;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
+}
+/* HAMBURGER - HIDDEN ON DESKTOP */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+
+/* SHOW HAMBURGER ON MOBILE ONLY */
+@media screen and (max-width: 480px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Header needs relative for positioning */
+  header {
+    position: relative;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Hide nav by default on mobile */
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #0f4d0f;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  /* Show when active class added by JS */
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li {
+    text-align: center;
+    padding: 15px 0;
+  }
 }
