@@ -147,19 +147,70 @@ $(document).ready(function (){
         $("#membershipPrice").text("selected membership: R" + selectedPrice + "per month");
     });
 });
-// TABS
-$('.tab-link').click(function() {
-  let tab = $(this).data('tab');
-  $('.tab-link').removeClass('active');
-  $('.tab-content').removeClass('active');
-  $(this).addClass('active');
-  $('#' + tab).addClass('active');
-});
 
-// MODAL - show when they select membership
-$('input[name="plan"]').on('change', function() {
-  let price = $(this).val();
-  $('#modalPrice').text('You selected R' + price + '/month');
-  $('#successModal').fadeIn(300);
+document.addEventListener('DOMContentLoaded', function() {
+
+  // --- 1. STICKY NAV ---
+  const mainNav = document.getElementById('mainNav');
+  if (mainNav) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        mainNav.classList.add('scrolled');
+      } else {
+        mainNav.classList.remove('scrolled');
+      }
+    });
+  }
+
+  // --- 2. IMAGE SLIDER INSIDE GREEN CARD ---
+  const imageList = document.getElementById('imageList');
+  if (imageList) {
+    let currentIndex = 0;
+    const totalImages = 4;
+
+    function showSlide(index) {
+      imageList.style.transform = `translateX(-${index * 25}%)`;
+    }
+
+    setInterval(function() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      showSlide(currentIndex);
+    }, 2500);
+  }
+
+
+  // --- 4. MEMBERSHIP PRICE SELECT ---
+  const planInputs = document.querySelectorAll('input[name="plan"]');
+  const priceDisplay = document.getElementById('membershipPrice');
+  const modalPrice = document.getElementById('modalPrice');
+  const successModal = document.getElementById('successModal');
+
+  planInputs.forEach(function(input) {
+    input.addEventListener('change', function() {
+      const price = this.value;
+      if (priceDisplay) {
+        priceDisplay.textContent = `selected membership: R ${price}`;
+      }
+      if (modalPrice) {
+        modalPrice.textContent = `You selected R ${price} /month`;
+      }
+      if (successModal) {
+        successModal.style.display = 'block';
+      }
+    });
+  });
+
+  // --- 5. TABS ---
+  const tabLinks = document.querySelectorAll('.tab-link');
+  tabLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      const tabId = this.getAttribute('data-tab');
+      document.querySelectorAll('.tab-link').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      this.classList.add('active');
+      const targetTab = document.getElementById(tabId);
+      if (targetTab) targetTab.classList.add('active');
+    });
+  });
+
 });
-$('.close').click(function() { $('#successModal').fadeOut(); });

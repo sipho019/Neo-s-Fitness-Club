@@ -87,15 +87,7 @@ nav a:hover {
     color: white;
 }
 
-p#intro-msg{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #eef4ee;
-    font-size: 38px;
-    margin-bottom: 15px;
-    margin-left: 35%;
-    font-weight: bold;
 
-}
 
 /* HERO SECTION */
 
@@ -120,16 +112,20 @@ p#intro-msg{
     };
 
 .img-container{
-    position: relative;
+    
     overflow: hidden;
     width: 100%;
-    height: 500px;
+   
 }
 
 
-p #intro-msg{
-    font-family:'Courier New', Courier, monospace;
-    font-weight: 900;
+p#intro-msg{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eef4ee;
+    font-size: 38px;
+    margin-bottom: 15px;
+    margin-left: 35%;
+    font-weight: bold;
     
 }
 .overlay-text {
@@ -157,6 +153,103 @@ p #intro-msg{
         opacity: 1;
         transform: translate(-50%, -50%);
     }
+}
+
+
+/* IMAGE SLIDDER */
+.slidder-wrapper{
+    
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+   
+}
+.image-list{
+    display: flex;
+    width: 400%;
+    height: 100%;
+
+}
+.image-item{
+    width: 25%;
+    height: 250px;
+    flex-shrink: 0;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.image-item:hover{
+    filter: brightness(1.1);
+}
+
+
+
+.card {
+    background-color: rgb(1, 50, 4);
+    max-width: 350px;
+    min-width: 600px;
+    margin: 30px ;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    overflow: hidden;
+    transition: 0.6s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+}
+.card.reveal{
+    opacity: 0;
+    transform: translateY(50px);
+}
+.card.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px #000500;
+}
+.page-wrapper{
+    display:flex;
+    gap: 40px;
+    padding: 40px;
+    max-width: 100%;
+    align-items: flex-start;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+
+/* RIGHT TEXT */
+
+.right-text{
+    flex: 1;
+    min-width: 250px;
+    padding-left: 20px;
+    margin-top: 23px;
+}
+.right-text h3{
+    color: #0f4d0f;
+    font-size: 2rem;
+}
+.right-text p{
+    margin-top: 15px;
+}
+.right-text a{
+    display: inline-block;
+    margin-top: 15px;
+    font-size: medium;
+    background-color: #083601;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fbf8f8;
+    transition: 0.3s;
+}
+.right-text a:hover{
+    color: #000500;
+    background-color: orange;
+    transform: translateX(5px);
 }
 
 /* 2.3 TYPOGRAPHY */
@@ -212,65 +305,8 @@ h1, h2, h3 {
   transition: 0.3s;
 }
 
-/*  HERO SECTION */  
+/*  CONTENT SECTION */
 
-
-
-
-.slidder-wrapper{
-    overflow: hidden;
-    width: 100%;
-}
-.image-list{
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-
-}
-.image-item{
-    flex: auto;
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    align-items: center;
-}
-
-
-
-.card {
-    background-color: rgb(1, 61, 5);
-    max-width: 900px;
-    margin: 30px ;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-.page-wrapper{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-    padding: 10px;
-}
-.right-text{
-    max-width: 600px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: x-large;
-}
-.right-text a{
-    font-size: medium;
-    background-color: #083601;
-    padding: 5px;
-    border-radius: 2px;
-    border: 2px #000500;
-    text-decoration: none;
-    color: #fbf8f8;
-}
-.right-text a:hover{
-    color: #000500;
-    background-color: orange;
-}
 
  /* Layout Structure*/
 
@@ -830,4 +866,3 @@ main.registration-container{
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
-

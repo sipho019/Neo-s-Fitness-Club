@@ -24,7 +24,7 @@
 
 <header>
 
-<nav>
+<nav id="mainNav">
     
     <ul>
     <li><a href="index.html">HOME</a></li>
@@ -32,7 +32,7 @@
     <li><a href="HTML/Services.html">SERVICES</a></li>
     <li><a href="HTML/Membership.html">MEMBERSHIP</a></li>
     <li><a href="HTML/Contact.html">CONTACT</a></li>
-    <button id="join-btn" >join us</button>
+    <a id="join-btn" href="./HTML/Membership.html">join us</a>
     </ul>
 </nav>
 </header>
@@ -50,7 +50,7 @@
 
                 <div class="container-img">
                     <div class="slider-wrapper">
-                        <div class="image-list">
+                        <div class="image-list" id="imageList">
                         
 
                 
@@ -69,23 +69,15 @@
             </div>
 
             <div class="right-text">
-                <h3>No Pain</h3>
-                <h3>No Gain</h3>
+                <h3>NO PAIN</h3>
+                <h3>NO GAIN</h3>
                 <p>Are you ready to become a stronger, healthier, and more confident version of yourself?</p>
-                <a  href="./HTML/About Us Page.html" >learn more about us</a>
+                <a  href="./HTML/About.html" >learn more about us</a>
             </div>
             </div>
         </section>
 
-<!-- MODAL -->
-<div id="joinModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Join Neo's Fitness!</h2>
-    <p>Ready to transform? Check our membership plans.</p>
-    <a href="HTML/Membership.html" class="modal-link">View Plans</a>
-  </div>
-</div>
+
 
 
     <!-- Footer section -->
@@ -110,6 +102,8 @@
     
 
     </footer>
+
+
 <script src="../JAVASCRIPT/jquery-3.7.1.min.js"></script>
 <script src="../JAVASCRIPT/script.js" differ></script>
 </body>
