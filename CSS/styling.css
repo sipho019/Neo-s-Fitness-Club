@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #f3f0ed;
+    background-color: #9f9d9d;
     
 
 }
@@ -13,7 +13,7 @@ body{
     border-radius: 0%;
     background-size: cover;
     height: 350px; 
-    animation: fadeSlideIn 1.5s ease-in forwards;
+    animation: fadeSlideIn 1.0s ease-in forwards;
 }
     @keyframes fadeSlideIn {
         from{
@@ -295,7 +295,8 @@ form label {
 }
 form input[type="text"], form input[type="email"], 
 form input[type="tel"], form input[type="date"], form select {
-    width: 100%;
+    display: flex;
+    width: 35%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #e8ddd0;
@@ -741,7 +742,7 @@ html { scroll-behavior: smooth; }
 
 main.registration-container{
     padding: 25px;
-    background-color: rgba(144, 193, 241, 0.337);
+    background-color: rgba(245, 246, 246, 0.7);
 }
 .registration-msg{
     padding: 10px;
@@ -774,9 +775,10 @@ main.registration-container{
     font-size: larger;
     width: 60%;
 }
-.registration-form #details{
-    width: 50%;
+.registration-form p{
+    color: whitesmoke;
 }
+
 .registration-form #note{
     color: red;  
 }.radio-group label{
