@@ -200,17 +200,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // --- 5. TABS ---
+  //  TABS ---
   const tabLinks = document.querySelectorAll('.tab-link');
   tabLinks.forEach(function(link) {
     link.addEventListener('click', function() {
       const tabId = this.getAttribute('data-tab');
+
       document.querySelectorAll('.tab-link').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       this.classList.add('active');
+      
       const targetTab = document.getElementById(tabId);
       if (targetTab) targetTab.classList.add('active');
     });
   });
 
 });
+
+// HAMBURGER TOGGLE - MOBILE
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    
+    // Change icon to X when open
+    if (navLinks.classList.contains('active')) {
+      menuToggle.innerHTML = '✕';
+    } else {
+      menuToggle.innerHTML = '☰';
+    }
+  });
+}

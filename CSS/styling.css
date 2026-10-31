@@ -13,16 +13,42 @@ body{
 /* header */
 
 header{
-    background-color: #010827;
+    display: flex;
+    background-color: #000000;
     margin: 0px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 5px 20px;
     width: 100%;
+    flex-direction: row;
     position: sticky;
     z-index: 100;
    
 }
+.logo-item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-logo{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    
+
+}
+
+    
 
 /* navigation bar */
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+    margin: 0;
+    padding-top: 25px;
+}
 nav {
     position: sticky;
     padding: 5px;
