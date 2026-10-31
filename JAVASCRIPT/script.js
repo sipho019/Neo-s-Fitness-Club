@@ -33,12 +33,6 @@ if (registrationForm) {
     // Select membership price and message elements
     
     const registrationMessage = document.getElementById("registrationMessage");
-    
-   
-
-
-
-
   
     // FORM SUBMISSION
     
@@ -200,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  //  TABS ---
+  //  TABS 
   const tabLinks = document.querySelectorAll('.tab-link');
   tabLinks.forEach(function(link) {
     link.addEventListener('click', function() {
@@ -209,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.tab-link').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       this.classList.add('active');
-      
+
       const targetTab = document.getElementById(tabId);
       if (targetTab) targetTab.classList.add('active');
     });
