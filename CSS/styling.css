@@ -948,3 +948,29 @@ main.registration-container{
     padding: 15px 0;
   }
 }
+
+/* CLASS TIMETABLE */
+
+.class-schedule{
+    display: block;
+    background-color: #022b01;
+    
+}
+.class-schedule h1{
+    padding: 10px;
+    color: #faf9f9;
+    margin-left: 35%;
+}
+.class-schedule h2{
+    color: #f8f6f6;
+    margin-left: 10px;
+}
+.class-schedule p{
+    margin-left: 10px;
+    color: white;
+}
+.class-schedule #note{
+    color: red;
+    font-style: italic;
+    margin-left: 10px;
+}
