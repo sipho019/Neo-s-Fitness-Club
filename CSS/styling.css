@@ -19,15 +19,11 @@ header{
     display: flex;
     justify-content: space-between;
     background-color: #010004;
-    margin: 0px;
-    margin-bottom: 0px;
-    padding: 0px 20px;
-    width: 100%;
-    min-height: 55px;
-    height: 100px;
-    flex-direction: row;
-    position: sticky;
-    z-index: 100;
+    color: #eef4ee;
+    align-items: center;    
+    padding: 10px 20px;
+    position: relative;
+    
    
 }
 .logo-item{
@@ -38,10 +34,74 @@ header{
 .nav-logo{
     width: 100px;
     height: 100px;
-    margin-bottom: 10p
+    margin-bottom: 10px;
+}
+/* HAMBURGER - HIDDEN ON DESKTOP */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+}
+/* SHOWING HAMBURGER ON MOBILE ONLY */
+
+@media screen and (max-width: 480px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Header relative positioning */
+  header {
+    position: relative;
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Hide nav by default on mobile */
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #161e16;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  /* Show when active class added by JS */
+
+  #main-nav.active {
+    display: flex;
+  }
+
+  #main-nav li {
+    text-align: center;
+    padding: 15px 0;
+  }
 }
 
-    
+
+.hamburger-menu-active {
+    overflow: hidden;
+    position: relative;
+    display: block; /* Show on mobile */
+
+}
+
+.hamburger-menu-inactive {
+    display: none; /* Hide on desktop */
+}
+
+/* HAMBURGER MENU */
+
+
 
 /* navigation bar */
 
@@ -71,18 +131,13 @@ header{
 .nav-links li a:hover::after{
     width: 100%;
 }
-nav{
-    position: sticky;
-    padding: 10px 20px;
-    top: 0;
-    z-index: 1000;
-    transition: all 0.5s;
+#main-nav{
+    position: flex;
+    gap: 20px;
 }
-nav.scrolled{
-    background-color: #000a1a;
-    box-shadow: 4px 20px #080808;
-}
-nav a { 
+
+
+#main-nav a { 
      color: #eef4ee;
      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      text-decoration: none;
@@ -104,7 +159,7 @@ nav ul {
     gap: 25px;
 
 }
-nav a:hover {
+#main-nav a:hover {
     color: #ff6600;
 }
 #join-btn{
@@ -300,6 +355,7 @@ p#intro-msg{
     background-color: orange;
     transform: translateX(5px);
 }
+
 
 /* TABLET - 768px to 1024px */
 @media(min-width:768px) and (max-width:1024px){
@@ -729,20 +785,6 @@ footer p{
     }
 }
 
-/* 2.2 BASE + RESET + 3.2 RELATIVE UNITS */
-
-:root {
-  --sage-bg: #eef4ee;
-  --sage-light: #d9e8d0;
-  --forest: #1a3c22;
-  --forest-light: #2a5a35;
-  --lime: #8bc34a;
-  --lime-hover: #7cb342;
-  --white: #ffffff;
-  --black: #0a0a0a;
-}
-
-
 /* card-box */
 
 .card-box{
@@ -1023,56 +1065,9 @@ main.registration-container{
 
 }
 
-/* HAMBURGER - HIDDEN ON DESKTOP */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: white;
-  z-index: 1001;
-}
 
-/* SHOWING HAMBURGER ON MOBILE ONLY */
 
-@media screen and (max-width: 480px) {
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
 
-  /* Header relative positioning */
-  header {
-    position: relative;
-    flex-direction: row !important;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Hide nav by default on mobile */
-  #nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #161e16;
-    flex-direction: column;
-    padding: 20px 0;
-    z-index: 1000;
-  }
-
-  /* Show when active class added by JS */
-  #nav-links.active {
-    display: flex;
-  }
-
-  #nav-links li {
-    text-align: center;
-    padding: 15px 0;
-  }
-}
 
 /* CLASS TIMETABLE */
 

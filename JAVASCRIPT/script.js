@@ -4,10 +4,10 @@ $(document).ready(function(){
 
         /* Toggle active state on click header */
 
-    $(this).toggleClass(".active");
+    $(this).toggleClass("active");
 
     // Toggle the indicator icon (+)
-    if($(this).hasClass(".active")){
+    if($(this).hasClass("active")){
         $(this).find(".accordion-icon").text("-");
     }else{
         $(this).find(".accordion-icon").text("+");
@@ -26,13 +26,13 @@ $(document).ready(function(){
 
 
 // Select the registration form
-const registrationForm = document.getElementById("registrationForm");
+const registrationForm = document.getElementById("registration-form");
 
 if (registrationForm) {
 
     // Select membership price and message elements
     
-    const registrationMessage = document.getElementById("registrationMessage");
+    const registrationMessage = document.getElementById("registration-msg");
   
     // FORM SUBMISSION
     
@@ -145,9 +145,9 @@ $(document).ready(function (){
 document.addEventListener('DOMContentLoaded', function() {
 
   // --- 1. STICKY NAV ---
-  const mainNav = document.getElementById('mainNav');
+  const mainNav = document.getElementById("main-nav");
   if (mainNav) {
-    window.addEventListener('scroll', function() {
+    window.addEventListener("scroll", function() {
       if (window.scrollY > 50) {
         mainNav.classList.add('scrolled');
       } else {
@@ -189,41 +189,23 @@ document.addEventListener('DOMContentLoaded', function() {
         modalPrice.textContent = `You selected R ${price} /month`;
       }
       if (successModal) {
-        successModal.style.display = 'block';
-      }
-    });
-  });
-
-  //  TABS 
-  const tabLinks = document.querySelectorAll('.tab-link');
-  tabLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-      const tabId = this.getAttribute('data-tab');
-
-      document.querySelectorAll('.tab-link').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      this.classList.add('active');
-
-      const targetTab = document.getElementById(tabId);
-      if (targetTab) targetTab.classList.add('active');
-    });
-  });
-
+        successModal.style.display = 'block';      
+  }
 });
+});
+// HAMBURGER MENU
 
-// HAMBURGER TOGGLE - MOBILE
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+const menuToggle = document.querySelector("#menu-toggle");
+const hamburgerMenu = document.querySelector("#hamburger-menu");
 
-if (menuToggle) {
-  menuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('active');
-    
-    // Change icon to X when open
-    if (navLinks.classList.contains('active')) {
-      menuToggle.innerHTML = '✕';
+menuToggle.addEventListener("click", function () {
+    if (hamburgerMenu.classList.contains("hamburger-menu-inactive")) {
+        
+        hamburgerMenu.classList.remove("hamburger-menu-inactive");
+        hamburgerMenu.classList.add("hamburger-menu-active");
     } else {
-      menuToggle.innerHTML = '☰';
+        hamburgerMenu.classList.remove("hamburger-menu-active");
+        hamburgerMenu.classList.add("hamburger-menu-inactive");
     }
-  });
-}
+});
+});

@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Neo's Fitness Club</title>
     <link rel="stylesheet" href="../CSS/styling.css">
+    <script src="../JAVASCRIPT/jquery-3.7.1.min.js"></script>
+    <script src="../JAVASCRIPT/script.js" differ></script>
 </head>
 
 <body class="inner-page">
 
     <!-- Header and navigation -->
     <header>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+    
     <img src="../MEDIA/fitnesslogo.png" class="nav-logo">
-<nav >
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+        <div class="hamburger-menu-active" id="hamburger-menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="HTML/About.html">ABOUT</a></li>
+            <li><a href="HTML/Services.html">SERVICES</a></li>
+            <li><a href="HTML/Membership.html">MEMBERSHIP</a></li>
+            <li><a href="HTML/Contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+<nav id="main-nav">
     
     <ul class="nav-links" id="nav-links">
                 <li><a href="../index.html">HOME</a></li>
@@ -276,8 +289,6 @@
     
 
     </footer>
-    <script src="../JAVASCRIPT/jquery-3.7.1.min.js"></script>
-    <script src="../JAVASCRIPT/script.js" differ></script>
 
 </body>
 </html>

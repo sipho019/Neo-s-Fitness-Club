@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Neo's Fitness Club | Affordable Gym in Johannesburg</title>
-<meta name="description" content="Join Neo's Fitness Club - Basic R199, Standard R349, Premium R499. Personal training, group classes, 24/7 access in Johannesburg.">
-<meta name="keywords" content="Neo's Fitness Club, gym Johannesburg, affordable gym, fitness club South Africa">
-<meta name="author" content="Neo's Fitness Club">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neo's Fitness Club | Affordable Gym in Cape Town</title>
+  <meta name="description" content="Join Neo's Fitness Club - Basic R199, Standard R500, Premium R700. Personal training, group classes, 24/7 access in Cape Town.">
+  <meta name="keywords" content="Neo's Fitness Club, gym Cape Town, affordable gym, fitness club South Africa">
+  <meta name="author" content="Neo's Fitness Club">
 
-<!-- Open Graph for SEO -->
-<meta property="og:title" content="Neo's Fitness Club">
-<meta property="og:description" content="Get fit with Neo's Team - Best gym deals in SA">   
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo's Fitness Club</title>
+  <!-- Open Graph for SEO -->
+  <meta property="og:title" content="Neo's Fitness Club">
+  <meta property="og:description" content="Get fit with Neo's Team - Best gym deals in SA">
+
+  
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="CSS/styling.css">
+    <script src="../JAVASCRIPT/jquery-3.7.1.min.js"></script>
+    <script src="../JAVASCRIPT/script.js" differ></script>
 
 
 </head>
@@ -23,9 +25,23 @@
     <!-- Header contains the main navigation for the site -->
 
 <header>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+    
     <img src="./MEDIA/fitnesslogo.png" class="nav-logo">
-<nav >
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Hamburger menu for mobile view -->
+    <div class="hamburger-menu-inactive" id="hamburger-menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="HTML/About.html">ABOUT</a></li>
+            <li><a href="HTML/Services.html">SERVICES</a></li>
+            <li><a href="HTML/Membership.html">MEMBERSHIP</a></li>
+            <li><a href="HTML/Contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Main navigation menu for desktop view -->
+    <nav id="main-nav">
     
     <ul class="nav-links" id="nav-links">
     <li><a href="index.html">HOME</a></li>
@@ -104,7 +120,6 @@
     </footer>
 
 
-<script src="../JAVASCRIPT/jquery-3.7.1.min.js"></script>
-<script src="../JAVASCRIPT/script.js" differ></script>
+
 </body>
 </html>
