@@ -53,6 +53,24 @@ header{
     margin: 0;
     padding-top: 25px;
 }
+.nav-links li{
+   position: relative;
+}
+.nav-links li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #f05304cd;
+    bottom: -4px;
+    left: 0;
+    font-size: medium;
+    width: 0%;
+    transition: width 0.3s;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
 nav{
     position: sticky;
     padding: 10px 20px;
@@ -751,6 +769,7 @@ footer p{
 .gallery-container {
     width: 100%;
     min-width: 0;
+    position: relative;
 }
 
 .gallery-slider {
@@ -932,7 +951,7 @@ main.registration-container{
     top: 70px;
     left: 0;
     width: 100%;
-    background: #0f4d0f;
+    background: #161e16;
     flex-direction: column;
     padding: 20px 0;
     z-index: 1000;
@@ -953,24 +972,88 @@ main.registration-container{
 
 .class-schedule{
     display: block;
-    background-color: #022b01;
+    background-color: rgba(1, 66, 7, 0.984);
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    position: sticky;
+    transition: all;
     
 }
 .class-schedule h1{
     padding: 10px;
-    color: #faf9f9;
+    color: #fefefe;
     margin-left: 35%;
+    
 }
 .class-schedule h2{
-    color: #f8f6f6;
+    color: #fdf9f9;
     margin-left: 10px;
 }
 .class-schedule p{
     margin-left: 10px;
-    color: white;
+    color: rgb(255, 254, 254);
 }
 .class-schedule #note{
     color: red;
     font-style: italic;
     margin-left: 10px;
+}
+
+/* Gallery container */
+
+
+/* Lightbox inside the gallery */
+.gallery-lightbox {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.92);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Enlarged image */
+.lightbox-image {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+/* Lightbox buttons */
+.gallery-lightbox button {
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.lightbox-close {
+    top: 5px;
+    right: 5px;
+}
+
+.lightbox-prev {
+    left: 5px;
+    top: 50%;
+}
+
+.lightbox-next {
+    right: 5px;
+    top: 50%;
+}
+
+/* Image counter */
+.lightbox-counter {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-size: 14px;
 }
