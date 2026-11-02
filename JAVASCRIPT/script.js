@@ -349,7 +349,9 @@ if ($("#service-list").length) {
 
     $("#service-list").html(html);
 }
+
 // Schedule Page - Dynamic Content Generation
+
 if ($("#schedule-body").length) {
 
     var schedule = [
