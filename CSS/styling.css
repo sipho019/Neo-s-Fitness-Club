@@ -1215,7 +1215,40 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
     }
 }
 
+/* search and filter controls for services page */
 
+.service-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.service-controls input,
+.service-controls select {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #dde2e8;
+    border-radius: 8px;
+}
+
+.service-controls input {
+    flex: 1 1 250px;
+    max-width: 400px;
+}
+
+#service-count {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 40px 15px;
+}
 
 
 /* CLASS TIMETABLE */
@@ -1650,14 +1683,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
     text-align: center;
 }
 
-/* MOBILE RESPONSIVENESS */
 
-@media screen and (max-width: 480px) {
-    .enquiry-container {
-        padding: 25px 18px;
-    }
 
-    .enquiry-heading h1 {
-        font-size: 24px;
-    }
-}
+

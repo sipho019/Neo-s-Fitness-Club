@@ -326,9 +326,17 @@ if ($("#service-list").length) {
         }
     ];
 
+   function renderServices() {
+    var searchText = $("#service-search").val().toLowerCase().trim();
+
+    var results = services.filter(function (service) {
+        return service.name.toLowerCase().includes(searchText) ||
+               service.description.toLowerCase().includes(searchText);
+    });
+
     var html = "";
 
-    services.forEach(function (service) {
+    results.forEach(function (service) {
 
         var imagesHtml = "";
 
@@ -347,7 +355,17 @@ if ($("#service-list").length) {
                 '</article>';
     });
 
+    if (results.length === 0) {
+        html = '<p class="no-results">No services match your search.</p>';
+    }
+
     $("#service-list").html(html);
+    $("#service-count").text("Showing " + results.length + " of " + services.length + " services");
+}
+
+$("#service-search").on("input", renderServices);
+
+renderServices();
 }
 
 // Schedule Page - Dynamic Content Generation
@@ -399,7 +417,8 @@ if ($("#schedule-body").length) {
 
     renderSchedule();
 }
-});
+
+
     // Contact page: form messages 
 
     if ($("#contact-form").length) {
@@ -463,9 +482,10 @@ if ($("#schedule-body").length) {
             .bindPopup("<b>Neo's Fitness Club</b><br>Come train with us!")
             .openPopup();
     }
-    //  enquiry form
-const enquiryForm = document.getElementById("enquiryForm");
-
+});
+    // Contact page: enquiry form
+const enquiryForm = document.getElementById("enquiry-form");
+if (enquiryForm) {
 const formResponse = document.getElementById("formResponse");
 
 enquiryForm.addEventListener("submit", function(event) {
@@ -532,5 +552,4 @@ enquiryForm.addEventListener("submit", function(event) {
     enquiryForm.reset();
 
 });
-
-
+}
