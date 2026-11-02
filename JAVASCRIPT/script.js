@@ -483,6 +483,10 @@ if ($("#schedule-body").length) {
             .openPopup();
     }
 });
+
+function sanitizeInput(str) {
+  return str.replace(/<[^>]*>/g, "").trim();
+}
     // Contact page: enquiry form
 const enquiryForm = document.getElementById("enquiry-form");
 if (enquiryForm) {

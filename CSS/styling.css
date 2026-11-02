@@ -1524,6 +1524,29 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
 .contact-page #form-message.error {
     color: #c62828;
 }
+.email-btn {
+    display: inline-block;
+    background-color: #129826b0;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.email-btn:hover {
+    background-color: #ef7605;
+}
+.contact-phone a {
+    color: #faf7f7;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-phone a:hover {
+    color: #f47703;
+    text-decoration: underline;
+}
 
 /* ===== Map ===== */
 .map-section {
@@ -1741,3 +1764,4 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
         font-size: 1.6rem;
     }
 }
+

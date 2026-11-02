@@ -1,0 +1,10 @@
+# Security Headers - Server Level
+Header set X-Frame-Options "DENY"
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Page Speed - Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript
+</IfModule>

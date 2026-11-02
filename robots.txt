@@ -1,2 +1,9 @@
 User-agent: *
 Allow: /
+
+# Don't index private folders
+Disallow: /MEDIA/
+Disallow: /JAVASCRIPT/jquery-3.7.1.min.js
+
+# Sitemap location
+Sitemap: /sitemap.xml
