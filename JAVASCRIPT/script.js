@@ -463,4 +463,74 @@ if ($("#schedule-body").length) {
             .bindPopup("<b>Neo's Fitness Club</b><br>Come train with us!")
             .openPopup();
     }
+    //  enquiry form
+const enquiryForm = document.getElementById("enquiryForm");
+
+const formResponse = document.getElementById("formResponse");
+
+enquiryForm.addEventListener("submit", function(event) {
+
+    // Prevent the page from refreshing
+    event.preventDefault();
+
+    // Check whether all required fields are valid
+    if (!enquiryForm.checkValidity()) {
+        enquiryForm.reportValidity();
+        return;
+    }
+
+    // Collect information from the form
+    const fullName = document.getElementById("fullName").value.trim();
+
+    const enquiryType = document.getElementById("enquiryType").value;
+
+    const message = document.getElementById("message").value.trim();
+
+    // Prepare a response
+    let response = "";
+
+    if (enquiryType === "membership") {
+
+        response = "Thank you, " + fullName +
+        "! Your membership enquiry has been received. Our team can assist you with membership options and pricing.";
+
+    } else if (enquiryType === "personal-training") {
+
+        response = "Thank you, " + fullName +
+        "! We will help you explore our personal training services and availability.";
+
+    } else if (enquiryType === "group-classes") {
+
+        response = "Thank you, " + fullName +
+        "! Your group classes enquiry has been received. We can provide information about class schedules and availability.";
+
+    } else if (enquiryType === "strength-training") {
+
+        response = "Thank you, " + fullName +
+        "! We can provide more information about our strength training programmes.";
+
+    } else if (enquiryType === "cardio") {
+
+        response = "Thank you, " + fullName +
+        "! We can assist you with information about our cardio programmes.";
+
+    } else if (enquiryType === "sponsorship") {
+
+        response = "Thank you, " + fullName +
+        "! Your sponsorship enquiry has been noted for further discussion.";
+
+    } else {
+
+        response = "Thank you, " + fullName +
+        "! Your enquiry has been received. We appreciate your interest in Neo's Fitness Club.";
+    }
+
+    // Display the response
+    formResponse.textContent = response;
+
+    // Reset the form
+    enquiryForm.reset();
+
+});
+
 
