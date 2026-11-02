@@ -1,26 +1,42 @@
-$(document).ready(function(){
-    $(".accordion-header").click(function(){
-        const currentContent = $(this).next(".accordion-content");
+// =========================================
+// ABOUT PAGE - ACCORDION ANIMATION
+// =========================================
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll(".accordion-header");
+  
+  if (headers.length > 0) {
+    headers.forEach(header => {
+      header.addEventListener("click", function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector(".accordion-icon");
+        const isOpen = content.classList.contains("active");
 
-        /* Toggle active state on click header */
+        // Close all others
+        document.querySelectorAll(".accordion-content").forEach(c => {
+          c.classList.remove("active");
+          c.style.maxHeight = null;
+        });
+        document.querySelectorAll(".accordion-icon").forEach(i => {
+          i.classList.remove("rotate");
+          i.textContent = "+";
+        });
 
-    $(this).toggleClass("active");
-
-    // Toggle the indicator icon (+)
-    if($(this).hasClass("active")){
-        $(this).find(".accordion-icon").text("-");
-    }else{
-        $(this).find(".accordion-icon").text("+");
+        // Open clicked one
+        if (!isOpen) {
+          content.classList.add("active");
+          content.style.maxHeight = content.scrollHeight + "px";
+          icon.classList.add("rotate");
+          icon.textContent = "×";
+        }
+      });
+    });
+    
+    // Auto open first one with animation
+    if (headers[0]) {
+      setTimeout(() => headers[0].click(), 1400);
     }
-
-    // Slide Toggle for current panel
-    currentContent.slideToggle(400);
-
-    //close other panels
-    $(".accordion-content").not(currentContent).slideUp(400);
-    $(".accordion-header").not(this).removeClass("active").find(".accordion-icon").text("+");
-    });
-    });
+  }
+});
 
 
 

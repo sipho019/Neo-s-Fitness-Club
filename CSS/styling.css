@@ -699,14 +699,6 @@ textarea {
     border-radius: 6px;
     box-sizing: border-box;
 }
-
-
-
-
-
-  
-
-
 /* FOOTERs */
 
 footer {
@@ -720,40 +712,21 @@ footer p{
     text-align: center;
 
 }
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color: orange;
+}
 #home-footer p{
     margin-bottom: 40px;
 
 }
-    
 
 
-/* -------------------------------------------------------
-   2.5 VISUAL STYLES - Professional Backgrounds
-   color, background-color, border, box-shadow
-   :hover, :focus, :active
-   ------------------------------------------------------- */
-.logo {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.9rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: white;
-}
-.logo span { color: var(--red); }
 
-.btn {
-    display: inline-block;
-    background-color: var(--red);
-    color: white;
-    border: 2px solid var(--red);
-    padding: 0.9em 2.2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    box-shadow: 0 8px 20px rgba(225, 6, 0, 0.3);
-    transition: all 0.3s ease;
-}
+
 
 .class-card {
     background-color: #ffffff;
@@ -836,8 +809,6 @@ footer p{
 .card-box{
     padding: 15px;
     margin: auto;
- 
-
 }
 .card-box h2{
     text-align: center;
@@ -868,41 +839,78 @@ footer p{
     margin: 20px;
 }
 
-.accordion-item{
-    border: 1px solid black;
-    margin-bottom: 5px;
-    border-radius: 4px;
-    overflow: hidden;
+/* =========================================
+   ABOUT US - ANIMATED VERSION
+   ========================================= */
+.card-box h2 {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideDown 0.6s ease forwards;
 }
 
-.accordion-header{
-    background-color: #022b01;
-    color: #fefefd;
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    user-select: none;
-    transition: background-color 0.2s ease;
-}
-.accordion-header:hover{
-    background-color: #026604cd;
+#about-intro {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.6s ease 0.3s forwards;
 }
 
-/* Active header */
-.accordion-header.active{
-    background-color: #01361c;
-    color: #d9e8d0;
+.accordion-container .accordion-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s ease forwards;
 }
-.accordion-content{
-    display: none;
-    padding: 18px;
-    background-color: rgba(2, 139, 107, 0.367);
-    border-top: 1px solid black;
+
+/* Stagger each accordion */
+.accordion-item:nth-child(1) { animation-delay: 0.5s; }
+.accordion-item:nth-child(2) { animation-delay: 0.7s; }
+.accordion-item:nth-child(3) { animation-delay: 0.9s; }
+.accordion-item:nth-child(4) { animation-delay: 1.1s; }
+
+@keyframes slideDown {
+  to { opacity: 1; transform: translateY(0); }
 }
-.accordion-content p{
-    color: rgb(9, 4, 4);
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Accordion animation */
+.accordion-header {
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.accordion-header {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: #073802;
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content.active {
+  opacity: 1;
+  max-height: 500px;
+  padding: 15px 0;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(45deg);
 }
 @media (max-width: 768px) {
 
