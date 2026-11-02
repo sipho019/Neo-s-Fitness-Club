@@ -473,77 +473,8 @@ p#intro-msg{
 }
 
 }
-/* 2.3 TYPOGRAPHY */
-h1, h2, h3 {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 800;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: var(--forest);
-}
 
- .container, .content-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 90%; /* 3.2 % */
-  max-width: 1200px;
-  margin: 3rem auto;
-  background: var(--white);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(26,60,34,0.08);
-}
-
-/* 2.5 VISUAL STYLES - color, background-color, border, box-shadow */
-.logo { 
-     font-family: 'Oswald';
-     font-size: 1.9rem; font-weight: 800; }
-.logo span { 
-    color: var(--lime);
- }
-
-
-
-.btn {
-  display: inline-block;
-  background-color: var(--lime);
-  color: var(--forest);
-  border: 2px solid var(--lime); /* border */
-  padding: 0.9em 2.2em; /* 3.2 em */
-  border-radius: 50px;
-  box-shadow: 0 8px 20px rgba(139,195,74,0.3); /* box-shadow */
-  font-weight: 800;
-  transition: 0.3s;
-}
-
-.class-card, .info-box {
-  background-color: var(--white);
-  border: 1px solid var(--sage-light);
-  border-left: 5px solid var(--lime);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: 0.3s;
-}
-
-/*  CONTENT SECTION */
-
-
- /* Layout Structure*/
-
-.hero {
-  display: grid; /* Grid */
-  grid-template-areas: "content image"; /* grid-template-areas */
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  min-height: 85vh;
-  padding: 5rem 5%; /* 3.2 % */
-  background: linear-gradient(135deg, #0a0a0a 0%, var(--forest) 100%);
-  color: white;
-}
-.hero h1, .hero p { color: white; }
-
-/* Table */
+/* TABLE */
 
 table {
     width: 100%;
@@ -637,40 +568,9 @@ textarea {
 
 
 
-/* -------------------------------------------------------
-   2.4 LAYOUT STRUCTURE - DESKTOP
-   display, flex-direction, grid-template-areas
-   ------------------------------------------------------- */
 
+  
 
-.hero {
-    display: grid;
-    grid-template-areas: "content image";
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
-    min-height: 90vh;
-    padding: 5rem 5%;
-    background-color: var(--black);
-    color: white;
-}
-
-.hero h1, .hero p { color: white; }
-
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    width: 90%;
-    max-width: 1300px;
-    margin: 4rem auto;
-}
-
-.classes-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
-}
 
 /* FOOTERs */
 
