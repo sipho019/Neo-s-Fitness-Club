@@ -208,4 +208,53 @@ menuToggle.addEventListener("click", function () {
         hamburgerMenu.classList.add("hamburger-menu-inactive");
     }
 });
+
+// Gallery Lightbox - SERVICES PAGE
+
+$(document).ready(function () {
+
+    var currentGallery = [];
+    var currentIndex = 0;
+
+    function showImage(index) {
+        currentIndex = index;
+        var $img = currentGallery.eq(index);
+        $("#lightbox-image")
+            .attr("src", $img.attr("src"))
+            .attr("alt", $img.attr("alt"));
+    }
+
+    function closeLightbox() {
+        $("#lightbox").removeClass("open");
+    }
+
+    $(".gallery-item").on("click", function () {
+        currentGallery = $(this).closest(".gallery-list").find(".gallery-item");
+        showImage(currentGallery.index(this));
+        $("#lightbox").addClass("open");
+    });
+
+    $("#lightbox-close").on("click", closeLightbox);
+
+    $("#lightbox").on("click", function (e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+
+    $("#lightbox-next").on("click", function () {
+        showImage((currentIndex + 1) % currentGallery.length);
+    });
+
+    $("#lightbox-prev").on("click", function () {
+        showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
+    });
+
+    $(document).on("keydown", function (e) {
+        if (e.key === "Escape") {
+            closeLightbox();
+        }
+    });
+
+});
 });
