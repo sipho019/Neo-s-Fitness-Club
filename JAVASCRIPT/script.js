@@ -1,6 +1,6 @@
-// =========================================
+
 // ABOUT PAGE - ACCORDION ANIMATION
-// =========================================
+
 document.addEventListener("DOMContentLoaded", function() {
   const headers = document.querySelectorAll(".accordion-header");
   
@@ -160,7 +160,7 @@ $(document).ready(function (){
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // --- 1. STICKY NAV ---
+  // STICKY NAV 
   const mainNav = document.getElementById("main-nav");
   if (mainNav) {
     window.addEventListener("scroll", function() {
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- 2. IMAGE SLIDER INSIDE GREEN CARD ---
+  //  IMAGE SLIDER INSIDE GREEN CARD
   const imageList = document.getElementById('imageList');
   if (imageList) {
     let currentIndex = 0;
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-  // --- 4. MEMBERSHIP PRICE SELECT ---
+  // MEMBERSHIP PRICE SELECT 
   const planInputs = document.querySelectorAll('input[name="plan"]');
   const priceDisplay = document.getElementById('membershipPrice');
   const modalPrice = document.getElementById('modalPrice');
@@ -532,7 +532,7 @@ if (enquiryForm && formResponse) {
     const fullName = sanitizeInput(document.getElementById("fullName").value);
     const email = sanitizeInput(document.getElementById("email").value);
 
-    // AJAX Simulation for POE - No page reload
+    // AJAX Simulation 
     setTimeout(function() {
       formResponse.textContent = "✓ Thank you " + fullName + "! Your enquiry has been received. We'll contact you within 24 hours at " + email + ".";
       formResponse.className = "success";
