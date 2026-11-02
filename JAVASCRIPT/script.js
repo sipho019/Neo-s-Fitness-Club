@@ -487,73 +487,43 @@ if ($("#schedule-body").length) {
 function sanitizeInput(str) {
   return str.replace(/<[^>]*>/g, "").trim();
 }
-    // Contact page: enquiry form
+  
+// ENQUIRY FORM - AJAX
+
+function sanitizeInput(str) {
+  return str.replace(/<[^>]*>/g, "").trim();
+}
+
 const enquiryForm = document.getElementById("enquiry-form");
-if (enquiryForm) {
 const formResponse = document.getElementById("formResponse");
 
-enquiryForm.addEventListener("submit", function(event) {
+if (enquiryForm && formResponse) {
+  enquiryForm.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    // Prevent the page from refreshing
-    event.preventDefault();
-
-    // Check whether all required fields are valid
     if (!enquiryForm.checkValidity()) {
-        enquiryForm.reportValidity();
-        return;
+      enquiryForm.reportValidity();
+      return;
     }
 
-    // Collect information from the form
-    const fullName = document.getElementById("fullName").value.trim();
+    const submitBtn = enquiryForm.querySelector(".submit-btn");
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+    formResponse.textContent = "";
+    formResponse.className = "";
 
-    const enquiryType = document.getElementById("enquiryType").value;
+    const fullName = sanitizeInput(document.getElementById("fullName").value);
+    const email = sanitizeInput(document.getElementById("email").value);
 
-    const message = document.getElementById("message").value.trim();
-
-    // Prepare a response
-    let response = "";
-
-    if (enquiryType === "membership") {
-
-        response = "Thank you, " + fullName +
-        "! Your membership enquiry has been received. Our team can assist you with membership options and pricing.";
-
-    } else if (enquiryType === "personal-training") {
-
-        response = "Thank you, " + fullName +
-        "! We will help you explore our personal training services and availability.";
-
-    } else if (enquiryType === "group-classes") {
-
-        response = "Thank you, " + fullName +
-        "! Your group classes enquiry has been received. We can provide information about class schedules and availability.";
-
-    } else if (enquiryType === "strength-training") {
-
-        response = "Thank you, " + fullName +
-        "! We can provide more information about our strength training programmes.";
-
-    } else if (enquiryType === "cardio") {
-
-        response = "Thank you, " + fullName +
-        "! We can assist you with information about our cardio programmes.";
-
-    } else if (enquiryType === "sponsorship") {
-
-        response = "Thank you, " + fullName +
-        "! Your sponsorship enquiry has been noted for further discussion.";
-
-    } else {
-
-        response = "Thank you, " + fullName +
-        "! Your enquiry has been received. We appreciate your interest in Neo's Fitness Club.";
-    }
-
-    // Display the response
-    formResponse.textContent = response;
-
-    // Reset the form
-    enquiryForm.reset();
-
-});
+    // AJAX Simulation for POE - No page reload
+    setTimeout(function() {
+      formResponse.textContent = "✓ Thank you " + fullName + "! Your enquiry has been received. We'll contact you within 24 hours at " + email + ".";
+      formResponse.className = "success";
+      formResponse.style.display = "block";
+      enquiryForm.reset();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }, 1000);
+  });
 }
