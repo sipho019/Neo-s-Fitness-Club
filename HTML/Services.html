@@ -55,86 +55,42 @@
         <p>Discover the services that support your fitness journey.</p>
     </div>
 
-  
-     <section>
-            <div class="class-schedule">
-
-                <h1>Class Schedule</h1>
-
-                <h2>Weekly Timetable</h2>
-                <p>Check our weekly timetable and choose the classes that best fit your schedule.</p>
-
-                <!-- /* Weekly timetable table */ -->
-                <table>
-                    <tr>
-                        <th>Day</th>
-                        <th>Class</th>
-                        <th>Time</th>
-                        <th>Trainer</th>
-                        <th>Level</th>
-                    </tr>
-                    <tr>
-                        <td>Monday</td>
-                        <td>Strength Training</td>
-                        <td>08:00 - 09:00</td>
-                        <td>Neo</td>
-                        <td>All Levels</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>Yoga</td>
-                        <td>17:00 - 18:00</td>
-                        <td>Zimvo</td>
-                        <td>Beginner</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>Cardio</td>
-                        <td>08:00 - 09:00</td>
-                        <td>Alusizo</td>
-                        <td>All Levels</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>Swimming</td>
-                        <td>17:30 - 18:30</td>
-                        <td>Ngcali</td>
-                        <td>All Levels</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>Strength Training</td>
-                        <td>16:00 - 17:00</td>
-                        <td>Liyema</td>
-                        <td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>Cardio</td>
-                        <td>09:00 - 10:00</td>
-                        <td>Thabo</td>
-                        <td>All Levels</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Yoga</td>
-                        <td>10:00 - 11:00</td>
-                        <td>Sarah</td>
-                        <td>Beginner</td>
-                    </tr>
-                </table>
-                <div class="class-note">
-
-                <h4 id="note">Note!</h4>
-                <!-- /* Class description content - kept as is */ -->
-                <p><b>MEDITATION</b> classes are from Monday to Friday only at 15:00pm until 18:00pm.</p>
-                <p><b>NUTRITION ADVISOR</b> is also available Monday to Friday only at 15:00pm until 18:00pm.</p>
-            </div>
-                
-            </div>
 
         </section>
         <section class="service-wrapper" id="service-list"></section>
+        <div class="schedule-controls">
+    <select id="schedule-day">
+        <option value="all">All days</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+    </select>
+
+    <select id="schedule-class">
+        <option value="all">All classes</option>
+        <option value="Strength Training">Strength Training</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Cardio">Cardio</option>
+        <option value="Swimming">Swimming</option>
+    </select>
+</div>
+
+<table class="schedule-table">
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Class</th>
+            <th>Time</th>
+            <th>Trainer</th>
+            <th>Level</th>
+        </tr>
+    </thead>
+    <tbody id="schedule-body"></tbody>
+</table>
     
 
     <!-- Footer section -->

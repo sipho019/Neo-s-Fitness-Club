@@ -349,6 +349,54 @@ if ($("#service-list").length) {
 
     $("#service-list").html(html);
 }
+// Schedule Page - Dynamic Content Generation
+if ($("#schedule-body").length) {
+
+    var schedule = [
+        { day: "Monday", className: "Strength Training", time: "08:00 - 09:00", trainer: "Neo", level: "All Levels" },
+        { day: "Tuesday", className: "Yoga", time: "17:00 - 18:00", trainer: "Zimvo", level: "Beginner" },
+        { day: "Wednesday", className: "Cardio", time: "08:00 - 09:00", trainer: "Alusizo", level: "All Levels" },
+        { day: "Thursday", className: "Swimming", time: "17:30 - 18:30", trainer: "Ngcali", level: "All Levels" },
+        { day: "Friday", className: "Strength Training", time: "16:00 - 17:00", trainer: "Liyema", level: "Intermediate" },
+        { day: "Saturday", className: "Cardio", time: "09:00 - 10:00", trainer: "Thabo", level: "All Levels" },
+        { day: "Sunday", className: "Yoga", time: "10:00 - 11:00", trainer: "Sarah", level: "Beginner" }
+    ];
+
+    function renderSchedule() {
+        var dayChoice = $("#schedule-day").val();
+        var classChoice = $("#schedule-class").val();
+
+        var rows = schedule.filter(function (item) {
+            var matchesDay = dayChoice === "all" || item.day === dayChoice;
+            var matchesClass = classChoice === "all" || item.className === classChoice;
+            return matchesDay && matchesClass;
+        });
+
+        var scheduleHtml = "";
+
+        rows.forEach(function (item) {
+            var levelClass = item.level.toLowerCase().replace(" ", "-");
+
+            scheduleHtml += '<tr>' +
+                '<td data-label="Day">' + item.day + '</td>' +
+                '<td data-label="Class">' + item.className + '</td>' +
+                '<td data-label="Time">' + item.time + '</td>' +
+                '<td data-label="Trainer">' + item.trainer + '</td>' +
+                '<td data-label="Level"><span class="level-badge ' + levelClass + '">' + item.level + '</span></td>' +
+                '</tr>';
+        });
+
+        if (rows.length === 0) {
+            scheduleHtml = '<tr><td colspan="5" class="no-classes">No classes match your selection.</td></tr>';
+        }
+
+        $("#schedule-body").html(scheduleHtml);
+    }
+
+    $("#schedule-day, #schedule-class").on("change", renderSchedule);
+
+    renderSchedule();
+}
 });
     // Contact page: form messages 
 
