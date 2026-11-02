@@ -39,3 +39,10 @@ All original content preserved.
 # Changes (30 Oct 2026)
 
 - Deleted class page, added into service page.
+
+# Final Changes 
+
+- added Hamburger menu
+- added animation in About page
+- added security
+- fixed complex and many bugs in JavaScript

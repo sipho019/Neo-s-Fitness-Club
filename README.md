@@ -64,7 +64,8 @@ Welcome to Neo's Fitness Club official website. This is a responsive fitness web
 
 ### Technologies Used
 - HTML5
-- CSS3 (Flexbox & Grid)
+- CSS3 
+- JavaScript & Jquery
 - Git & GitHub for version control
 - GitHub Pages for hosting
 
@@ -132,6 +133,18 @@ W3Schools (n.d.) *CSS grid layout*. Available at: https://www.w3schools.com/css/
 - Fixed feedback: White background looked plain - Now modern green background with radial gradients
 - Fixed feedback: Duplicate CSS rules - Cleaned styling.css to have one body rule
 
+## Final Poe (Part 3)
+
+- This project demonstrates practical front-end web development skills, including responsive design, website structure, styling and interactive functionality.
+## Responsiveness
+Tested on:
+- Desktop: 1920x1080
+- Tablet: 768px
+- Mobile: 375px (iPhone SE) - as per About Us screenshot
+
+## Deployment
+
+- The website is intended to be deployed using Netlify, providing public access through a live website URL.
 
 ## References
 
@@ -146,6 +159,22 @@ MDN Web Docs (n.d.) *Responsive design*. Available at: [paste the exact page URL
 W3Schools (n.d.) *CSS flexbox*. Available at: https://www.w3schools.com/css/css3_flexbox.asp (Accessed: 12 October 2026).
 
 W3Schools (n.d.) *CSS grid layout*. Available at: https://www.w3schools.com/css/css_grid.asp (Accessed: 12 October 2026).
+
+## updated Reference (Part 3)
+
+jQuery Foundation (2023) jQuery v3.7.1 Documentation. Available at: https://api.jquery.com/ (Accessed: 2 November 2026).
+
+Mozilla Developer Network (2024) HTML, CSS and JavaScript Documentation. Available at: https://developer.mozilla.org/ (Accessed: 2 November 2026).
+
+W3Schools (2024) CSS Animations and Media Queries. Available at: https://www.w3schools.com/css/ (Accessed: 2 November 2026).
+
+Google Developers (2024) PageSpeed Insights and SEO Best Practices. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 2 November 2026).
+
+Neo's Fitness Club Logo and Images (2026) Original media created for website. Cape Town: Neo's Fitness Club.
+
+Unsplash (2024) Gym and Fitness Stock Images. Available at: https://unsplash.com/s/photos/gym (Accessed: 2 November 2026).
+
+World Health Organization (2020) Physical activity and fitness guidelines. Geneva: WHO. Available at: https://www.who.int/news-room/fact-sheets/detail/physical-activity (Accessed: 2 November 2026).
 
 ## How to Test Responsiveness
 Open Chrome > Press F12 > Click Toggle Device Toolbar (phone icon) > Change dimensions to 375, 768, 1920
