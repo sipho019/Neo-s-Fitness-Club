@@ -1558,3 +1558,106 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
         font-size: 1.2rem;
     }
 }
+
+/* ENQUIRY PAGE */
+
+.enquiry-page {
+    min-height: 100vh;
+    padding: 60px 20px;
+    background-color: #f4f6f3;
+}
+
+.enquiry-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.enquiry-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.enquiry-heading h1 {
+    font-size: 30px;
+    color: #263526;
+    margin-bottom: 12px;
+}
+
+.enquiry-heading p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #263526;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #78936b;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #263526;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #78936b;
+}
+
+#formResponse {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #263526;
+    text-align: center;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 480px) {
+    .enquiry-container {
+        padding: 25px 18px;
+    }
+
+    .enquiry-heading h1 {
+        font-size: 24px;
+    }
+}
