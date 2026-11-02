@@ -258,3 +258,65 @@ $(document).ready(function () {
 
 });
 });
+    /* ===== 3. Contact page: form messages ===== */
+    if ($("#contact-form").length) {
+
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function showMessage(text, type) {
+            $("#form-message")
+                .removeClass("success error")
+                .addClass(type)
+                .text(text);
+        }
+
+        $("#contact-form").on("submit", function (e) {
+            e.preventDefault();
+
+            var name = $("#name").val().trim();
+            var email = $("#email").val().trim();
+            var message = $("#message").val().trim();
+
+            if (name === "") {
+                showMessage("Please enter your name.", "error");
+                $("#name").focus();
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+                showMessage("Please enter a valid email address.", "error");
+                $("#email").focus();
+                return;
+            }
+
+            if (message.length < 10) {
+                showMessage("Your message must be at least 10 characters long.", "error");
+                $("#message").focus();
+                return;
+            }
+
+            showMessage("Thank you, " + name + "! Your message has been sent. We will get back to you soon.", "success");
+            this.reset();
+        });
+    }
+
+
+    /* ===== 4. Contact page: Leaflet map ===== */
+    if ($("#map").length) {
+
+        var gymLat = -33.9249;
+        var gymLng = 18.4241;
+
+        var map = L.map("map").setView([gymLat, gymLng], 15);
+
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: "&copy; OpenStreetMap contributors"
+        }).addTo(map);
+
+        L.marker([gymLat, gymLng])
+            .addTo(map)
+            .bindPopup("<b>Neo's Fitness Club</b><br>Come train with us!")
+            .openPopup();
+    }
+
