@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neo's Fitness Club | Affordable Gym in Cape Town</title>
+  <meta name="description" content="Join Neo's Fitness Club - Basic R199, Standard R500, Premium R700. Personal training, group classes, 24/7 access in Cape Town.">
+  <meta name="keywords" content="Neo's Fitness Club, gym Cape Town, affordable gym, fitness club South Africa">
+  <meta name="author" content="Neo's Fitness Club">
+
+  <!-- Open Graph for SEO -->
+  <meta property="og:title" content="Neo's Fitness Club">
+  <meta property="og:description" content="Get fit with Neo's Team - Best gym deals in SA">
+
+  
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./CSS/styling.css">
+    <script src="./JAVASCRIPT/jquery-3.7.1.min.js"></script>
+    <script src="./JAVASCRIPT/script.js" differ></script>
+</head>
+<body>
+    
+<main class="enquiry-page">
+
+    <section class="enquiry-container">
+
+        <div class="enquiry-heading">
+            <h1>Make an Enquiry</h1>
+            <p>
+                Have questions about our fitness services or membership?
+                Complete the form below and let us help you.
+            </p>
+        </div>
+
+        <form id="enquiryForm">
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    required
+                    minlength="2"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Contact Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="enquiryType">Type of Enquiry</label>
+
+                <select id="enquiryType" name="enquiryType" required>
+                    <option value="">Select an enquiry type</option>
+                    <option value="membership">Membership</option>
+                    <option value="personal-training">Personal Training</option>
+                    <option value="group-classes">Group Classes</option>
+                    <option value="strength-training">Strength Training</option>
+                    <option value="cardio">Cardio Programmes</option>
+                    <option value="sponsorship">Sponsorship</option>
+                    <option value="general">General Enquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Enquiry</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Tell us how we can assist you..."
+                    required
+                    minlength="10"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Enquiry
+            </button>
+
+            <p id="formResponse" role="status" aria-live="polite"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+</body>
+</html>
