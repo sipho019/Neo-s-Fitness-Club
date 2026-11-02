@@ -257,8 +257,101 @@ $(document).ready(function () {
     });
 
 });
+
+// Services Page - Dynamic Content Generation
+
+if ($("#service-list").length) {
+
+    var services = [
+        {
+            name: "Strength Training",
+            description: "Strength training helps build muscle, increase physical strength, and improve endurance. Through exercises using weights and resistance, you can develop better stability, support healthy bones, and work towards your personal fitness goals.",
+            images: [
+                { src: "../MEDIA/strength.push.png", alt: "Strength training exercise" },
+                { src: "../MEDIA/strengthcurl.png", alt: "Bicep curl exercise" },
+                { src: "../MEDIA/strenghtsquat.png", alt: "Squat exercise" },
+                { src: "../MEDIA/strengthgirle.png", alt: "Strength training workout" },
+                { src: "../MEDIA/strengthtrain.png", alt: "Gym strength training" }
+            ]
+        },
+        {
+            name: "Cardio",
+            description: "Cardio exercises improve heart health, stamina, and overall endurance. Activities such as cycling, skipping, and group workouts help you stay active, burn energy, and build a stronger cardiovascular system while enjoying your fitness journey.",
+            images: [
+                { src: "../MEDIA/spinning.png", alt: "Indoor spinning workout" },
+                { src: "../MEDIA/groupclass.png", alt: "Group fitness class" },
+                { src: "../MEDIA/cardioworkout.png", alt: "Cardio workout" },
+                { src: "../MEDIA/cardioskipping.png", alt: "Skipping exercise" }
+            ]
+        },
+        {
+            name: "Nutrition",
+            description: "Good nutrition helps fuel your workouts, support recovery, and maintain overall well-being. Learning about balanced meals, healthy food choices, and proper hydration can help you build sustainable habits that complement your fitness goals.",
+            images: [
+                { src: "../MEDIA/nutrion.png", alt: "Healthy nutrition" },
+                { src: "../MEDIA/nutriotionsmothie.png", alt: "Healthy smoothie" },
+                { src: "../MEDIA/shakes.png", alt: "Nutritious shakes" },
+                { src: "../MEDIA/nutritionfood.png", alt: "Healthy balanced meal" }
+            ]
+        },
+        {
+            name: "Swimming",
+            description: "Swimming offers a full-body workout that develops endurance, coordination, and muscular strength while placing less impact on the joints. It can also be an enjoyable way to stay active, improve confidence in the water, and support your overall fitness.",
+            images: [
+                { src: "../MEDIA/swimming.png", alt: "Swimming pool" },
+                { src: "../MEDIA/swimmingboy.png", alt: "Swimming practice" },
+                { src: "../MEDIA/swimmingkids.png", alt: "Children swimming" },
+                { src: "../MEDIA/swimmingtranie.png", alt: "Swimming training" }
+            ]
+        },
+        {
+            name: "Yoga",
+            description: "Yoga combines movement, stretching, and controlled breathing to improve flexibility, balance, and body awareness. Regular practice can help release tension, encourage relaxation, and create a greater sense of physical and mental balance.",
+            images: [
+                { src: "../MEDIA/yoga.png", alt: "Peaceful yoga studio" },
+                { src: "../MEDIA/yogaclass.png", alt: "Yoga class practice" },
+                { src: "../MEDIA/yogagirls.png", alt: "Outdoor yoga session" },
+                { src: "../MEDIA/yogagroup.png", alt: "Group yoga session" }
+            ]
+        },
+        {
+            name: "Meditation",
+            description: "Meditation helps improve mental clarity, reduce stress, and create a sense of inner peace and balance. By focusing on the present moment and your breathing, you can develop greater awareness, improve concentration, and encourage relaxation. It provides a peaceful opportunity to reconnect with yourself and approach daily challenges with a calmer mindset.",
+            images: [
+                { src: "../MEDIA/madidate.png", alt: "Meditation practice" },
+                { src: "../MEDIA/meditation.png", alt: "Peaceful meditation" },
+                { src: "../MEDIA/meditationclasses.png", alt: "Group meditation class" },
+                { src: "../MEDIA/meditationpeace.png", alt: "Peaceful meditation environment" }
+            ]
+        }
+    ];
+
+    var html = "";
+
+    services.forEach(function (service) {
+
+        var imagesHtml = "";
+
+        service.images.forEach(function (image) {
+            imagesHtml += '<img src="' + image.src + '" alt="' + image.alt + '" class="gallery-item">';
+        });
+
+        html += '<article class="service-card">' +
+                    '<h4>' + service.name + '</h4>' +
+                    '<div class="gallery-container">' +
+                        '<div class="gallery-slider">' +
+                            '<div class="gallery-list">' + imagesHtml + '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '<p class="service-description">' + service.description + '</p>' +
+                '</article>';
+    });
+
+    $("#service-list").html(html);
+}
 });
-    /* ===== 3. Contact page: form messages ===== */
+    // Contact page: form messages 
+
     if ($("#contact-form").length) {
 
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -301,7 +394,8 @@ $(document).ready(function () {
     }
 
 
-    /* ===== 4. Contact page: Leaflet map ===== */
+    // Contact page: Leaflet map
+
     if ($("#map").length) {
 
         var gymLat = -33.9249;
