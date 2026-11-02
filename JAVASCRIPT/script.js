@@ -244,8 +244,13 @@ $(document).ready(function () {
         $("#lightbox").removeClass("open");
     }
 
-    $(".gallery-item").on("click", function () {
-        currentGallery = $(this).closest(".gallery-list").find(".gallery-item");
+    // FIX 1: delegated event
+    $(document).on("click", ".gallery-item", function () {
+        // FIX 2: only visible after search
+        currentGallery = $(this).closest(".gallery-list").find(".gallery-item:visible");
+        if(currentGallery.length === 0){
+            currentGallery = $(this).closest(".gallery-list").find(".gallery-item");
+        }
         showImage(currentGallery.index(this));
         $("#lightbox").addClass("open");
     });
@@ -259,10 +264,12 @@ $(document).ready(function () {
     });
 
     $("#lightbox-next").on("click", function () {
+        if(currentGallery.length === 0) return;
         showImage((currentIndex + 1) % currentGallery.length);
     });
 
     $("#lightbox-prev").on("click", function () {
+        if(currentGallery.length === 0) return;
         showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
     });
 
@@ -273,7 +280,6 @@ $(document).ready(function () {
     });
 
 });
-
 // Services Page - Dynamic Content Generation
 
 if ($("#service-list").length) {
