@@ -162,19 +162,18 @@ W3Schools (n.d.) *CSS grid layout*. Available at: https://www.w3schools.com/css/
 
 ## updated Reference (Part 3)
 
-jQuery Foundation (2023) jQuery v3.7.1 Documentation. Available at: https://api.jquery.com/ (Accessed: 2 November 2026).
 
-Mozilla Developer Network (2024) HTML, CSS and JavaScript Documentation. Available at: https://developer.mozilla.org/ (Accessed: 2 November 2026).
+Google Developers (2024) SEO Starter Guide: Control crawling and indexing. Available at: https://developers.google.com/search/docs/crawling-indexing/robots/intro (Accessed: 2 November 2026).
 
-W3Schools (2024) CSS Animations and Media Queries. Available at: https://www.w3schools.com/css/ (Accessed: 2 November 2026).
+jQuery Foundation (2023) jQuery API Documentation Version 3.7.1. Available at: https://api.jquery.com/ (Accessed: 2 November 2026).
 
-Google Developers (2024) PageSpeed Insights and SEO Best Practices. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 2 November 2026).
+Mozilla Developer Network (2024) HTML, CSS and JavaScript Guides. Available at: https://developer.mozilla.org/en-US/docs/Web (Accessed: 2 November 2026).
 
-Neo's Fitness Club Logo and Images (2026) Original media created for website. Cape Town: Neo's Fitness Club.
+Mshumpela, N. (2026) Neo's Fitness Club - Live Production Website. Available at: https://neosfitnessclub.netlify.app (Accessed: 2 November 2026).
 
-Unsplash (2024) Gym and Fitness Stock Images. Available at: https://unsplash.com/s/photos/gym (Accessed: 2 November 2026).
+Netlify (2026) Project: neosfitnessclub - Published deploy main@b8b9774, 58 new files uploaded. Available at: https://app.netlify.com/projects/neosfitnessclub/deploys (Accessed: 2 November 2026).
 
-World Health Organization (2020) Physical activity and fitness guidelines. Geneva: WHO. Available at: https://www.who.int/news-room/fact-sheets/detail/physical-activity (Accessed: 2 November 2026).
+W3Schools (2024) CSS Responsive Design and Media Queries. Available at: https://www.w3schools.com/css/css_rwd_intro.asp (Accessed: 2 November 2026).
 
 ## How to Test Responsiveness
 Open Chrome > Press F12 > Click Toggle Device Toolbar (phone icon) > Change dimensions to 375, 768, 1920

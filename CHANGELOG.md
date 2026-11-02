@@ -36,13 +36,14 @@ All original content preserved.
 - Slightly added new color scheme (dark purple).
 - Removed unessecary codes and tags.
 
-# Changes (30 Oct 2026)
+## Changes (30 Oct 2026)
 
 - Deleted class page, added into service page.
 
-# Final Changes 
+## Final Changes 
 
 - added Hamburger menu
 - added animation in About page
 - added security
 - fixed complex and many bugs in JavaScript
+- Website Deployed to Netlify
