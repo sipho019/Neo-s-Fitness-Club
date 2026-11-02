@@ -62,9 +62,18 @@
 
         <div class="service-controls">
     <input type="text" id="service-search" placeholder="Search services...">
-</div>
 
-<p id="service-count"></p>
+    <select id="service-category">
+        <option value="all">All categories</option>
+        <option value="Fitness">Fitness</option>
+        <option value="Wellbeing">Wellbeing</option>
+    </select>
+
+    <select id="service-sort">
+        <option value="az">Name: A to Z</option>
+        <option value="za">Name: Z to A</option>
+    </select>
+</div>
 
         <section class="service-wrapper" id="service-list"></section>
         <div class="schedule-controls">
