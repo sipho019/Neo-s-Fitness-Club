@@ -48,7 +48,7 @@ if (registrationForm) {
 
     // Select membership price and message elements
     
-    const registrationMessage = document.getElementById("registration-msg");
+    const registrationMessage = document.getElementById("registration-message");
   
     // FORM SUBMISSION
     
@@ -170,7 +170,9 @@ document.addEventListener('DOMContentLoaded', function() {
         mainNav.classList.remove('scrolled');
       }
     });
-  }
+    }
+});
+  
 
   //  IMAGE SLIDER INSIDE GREEN CARD
   const imageList = document.getElementById('imageList');
@@ -210,18 +212,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 });
 // HAMBURGER MENU
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector("#menu-toggle");
+    const hamburgerMenu = document.querySelector("#hamburger-menu");
 
-const menuToggle = document.querySelector("#menu-toggle");
-const hamburgerMenu = document.querySelector("#hamburger-menu");
-
-menuToggle.addEventListener("click", function () {
-    if (hamburgerMenu.classList.contains("hamburger-menu-inactive")) {
-        
-        hamburgerMenu.classList.remove("hamburger-menu-inactive");
-        hamburgerMenu.classList.add("hamburger-menu-active");
-    } else {
-        hamburgerMenu.classList.remove("hamburger-menu-active");
-        hamburgerMenu.classList.add("hamburger-menu-inactive");
+    if (menuToggle && hamburgerMenu) {
+        menuToggle.addEventListener("click", function () {
+            hamburgerMenu.classList.toggle("hamburger-menu-inactive");
+            hamburgerMenu.classList.toggle("hamburger-menu-active");
+        });
     }
 });
 
@@ -504,7 +503,7 @@ if ($("#schedule-body").length) {
             .bindPopup("<b>Neo's Fitness Club</b><br>Come train with us!")
             .openPopup();
     }
-});
+
 
 function sanitizeInput(str) {
   return str.replace(/<[^>]*>/g, "").trim();
